@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="shop">
+    <image class="shop-image" src="{{payList.pic_cover_mid}}" alt="" />
+    <view class="shop-right">
+      <view class="shop-name">{{payList.goods_name}}</view>
+      <view class="shop-price">
+        ￥
+        <text>{{payList.price}}</text>
+      </view>
+      <view class="num">x{{payList.total_num}}</view>
+    </view>
+  </view>
+  <view class="name">
+    <view class="left">手机号</view>
+    <input bindinput='input_txt' class="input" focus="true" maxlength="11" placeholder="请输入您的手机号" placeholderStyle="color:#aba9a9" type="number" value="{{receiver_mobile}}"></input>
+  </view>
+  <view class="recommend">
+    <view class="recommend-top">商家信息</view>
+    <view class="recommend-name">
+      <image class="recommend-img" src="https://lw.gyfledu.com/upload/images/dinwei.png"></image>
+      <text class="recommend-txt">{{payList.live_store_address}}</text>
+    </view>
+    <image class="recommend-po" bindtap="call" src="https://lw.gyfledu.com/upload/images/bofang@2x.png"></image>
+  </view>
+  <view class="news">
+    <view class="news-top">
+      订单信息
+    </view>
+    <view class="news-conter">
+      <text class="news-left">订单号:</text>
+      <text class="news-right">{{payListw.order_no}}</text>
+    </view>
+    <view class="news-conter">
+      <text class="news-left">数量:</text>
+      <text class="news-right">{{payListw.order_total_num}}</text>
+    </view>
+    <view class="news-conter">
+      <text class="news-left">价格:</text>
+      <text class="news-right">￥{{payListw.order_pay_price}}</text>
+    </view>
+  </view>
+  <view class="btn" bindtap="gotopay">去付款</view>
+</view>

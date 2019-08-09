@@ -1,0 +1,51 @@
+<view class="page">
+  <view class="box">
+    <view class="top">
+      <view class="{{currentTabsIndex == 0?'active':''}}" data-current="0" bindtap="tap">
+        <text>全部订单</text>
+        <lable></lable>
+      </view>
+      <view class="{{currentTabsIndex == 1?'active':''}}" data-current="1" bindtap="tap">
+        <text>待付款</text>
+        <lable></lable>
+      </view>
+      <view class="{{currentTabsIndex == 2?'active':''}}" data-current="2" bindtap="tap">
+        <text>待使用</text>
+        <lable></lable>
+      </view>
+      <view class="{{currentTabsIndex == 3?'active':''}}" data-current="3" bindtap="tap">
+        <text>已完成</text>
+        <lable></lable>
+      </view>
+    </view>
+  </view>
+  <view class="card" wx:for="{{orderlists}}" wx:key="index">
+    <view class="card-top">
+      <navigator class="topr" hover-class="none" url="" open-type="navigate">
+        <image class="topr-img" src="{{item.pic_cover_small}}" alt="" />
+        <view class="topr-txt">{{item.shop_name}}</view>
+        <image class="topr-image" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      </navigator>
+      <view class="topl">
+        {{item.pay_status == 0? '待付款':''}}{{item.pay_status == 2? '待使用':''}}{{item.pay_status == 3? '已完成':''}}{{item.pay_status == 4? '待评价':''}}
+      </view>
+    </view>
+    <view class="shop">
+      <image class="shop-image" src="{{item.pic_cover_small}}" alt="" />
+      <view class="shop-right">
+        <view class="shop-name">{{item.goods_name}}</view>
+        <view class="shop-price">
+          ￥
+          <text>{{item.pay_money}}</text>
+        </view>
+        <view class="num">x{{item.num}}</view>
+      </view>
+    </view>
+    <view class="btn {{item.pay_status == 3? 'hidden':''}}" bindtap="gotopay" data-index="{{index}}">
+      {{item.pay_status == 0? '去付款':''}}{{item.pay_status == 2? '去使用':''}}
+    </view>
+    <view class="btn {{item.is_evaluate == 0&item.pay_status == 4? 'show':'hidden'}}" bindtap="gotopay" data-index="{{index}}">
+      {{item.is_evaluate == 0? '去评价':''}}
+    </view>
+  </view>
+</view>

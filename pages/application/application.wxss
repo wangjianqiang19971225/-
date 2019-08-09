@@ -1,0 +1,70 @@
+.conter {
+  background-color: #f1f1f1;
+  padding: 20rpx 0;
+
+}
+
+.name {
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #fafafb;
+  overflow: hidden;
+}
+
+.left {
+  float: left;
+  width: 257rpx;
+}
+
+.input {
+  height: 88rpx;
+  width: 433rpx;
+  float: left;
+  font-size: 28rpx;
+}
+
+.shangchuan {
+  margin: 30rpx;
+}
+
+.sc-img {
+  height: 135rpx;
+  width: 135rpx;
+}
+
+.sc-txt {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.btn {
+  height: 80rpx;
+  width: 690rpx;
+  margin: 0 30rpx;
+  border-radius: 10rpx;
+  background-color: #00bc71;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 60rpx;
+}
+
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.input-b {
+  height: 200rpx;
+  width: 710rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}

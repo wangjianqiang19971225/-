@@ -1,0 +1,52 @@
+<view class="conter">
+  <!-- 顶部导航 -->
+  <view class="box">
+    <view class="top">
+      <view class="{{currentTabsIndex == 1?'active':''}}" data-current="1" bindtap="tap">
+        <text>数学</text>
+        <lable></lable>
+      </view>
+      <view class="{{currentTabsIndex == 2?'active':''}}" data-current="2" bindtap="tap">
+        <text>语文</text>
+        <lable></lable>
+      </view>
+      <view class="{{currentTabsIndex == 3?'active':''}}" data-current="3" bindtap="tap">
+        <text>英语</text>
+        <lable></lable>
+      </view>
+      <view class="{{currentTabsIndex == 4?'active':''}}" data-current="4" bindtap="tap">
+        <text>艺术</text>
+        <lable></lable>
+      </view>
+      <view class="{{currentTabsIndex == 5?'active':''}}" data-current="5" bindtap="tap">
+        <text>早教</text>
+        <lable></lable>
+      </view>
+    </view>
+  </view>
+  <!-- 商品 -->
+  <view class="merchandise" wx:for="{{typecourseList}}" wx:key="index" >
+    <view class="left">
+      <image class="merchandise-img" src="{{item.shop_logo}}" alt="" />
+    </view>
+    <view class="right">
+      <text class="merchandise-name">{{item.shop_name}}</text>
+      <view class="star">
+        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
+        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
+        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
+        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
+        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
+      </view>
+      <view class="merchandise-time">营业时间: {{item.live_time}}</view>
+      <view class="merchandise-time">适合年龄: {{item.suit_age}}岁</view>
+      <view class="merchandise-position">
+        <image class="position" src="https://lw.gyfledu.com/upload/images/dinwei.png" alt="" />
+        <view class="position-txt">{{item.shop_address}}</view>
+        <view class="distance">距离我{{item.distance/1000}}km</view>
+      </view>
+      <navigator class="goto" hover-class="none" url="/pages/details/details?shop_id={{item.shop_id}}" open-type="navigate">进店</navigator>
+    </view>
+  </view>
+
+</view>

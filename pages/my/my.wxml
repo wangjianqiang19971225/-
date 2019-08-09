@@ -1,0 +1,54 @@
+<!-- pages/In/In.wxml -->
+<view class="conter">
+  <view class='my-header'>
+    <image class="my-img" src="{{userlist.avatarUrl}}"></image>
+    <view class="my-right">
+      <view class="my-name">{{userlist.nickName}}</view>
+      <view class="my-integral">{{total_integral}}积分</view>
+    </view>
+  </view>
+  <view class="order">
+    <view class="order-son">
+      <view class="order-top">
+        <view class="order-name">我的订单</view>
+        <navigator url="/pages/order/order" hover-class="none" open-type="navigate">
+          <image class="orde-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png"></image>
+          <view class="orde-all">查看全部订单</view>
+        </navigator>
+      </view>
+      <view class="content">
+        <navigator hover-class="none" url="/pages/order/order?current_id=1" open-type="navigate">
+          <image src="https://lw.gyfledu.com/upload/images/qianbao@2x.png"></image>
+          <text>待付款</text>
+        </navigator>
+        <navigator hover-class="none" url="/pages/order/order?current_id=2" open-type="navigate">
+          <image src="https://lw.gyfledu.com/upload/images/pingpai@2x.png"></image>
+          <text>待使用</text>
+        </navigator>
+        <navigator hover-class="none" url="/pages/order/order?current_id=3" open-type="navigate">
+          <image src="https://lw.gyfledu.com/upload/images/sadjahf@2x.png"></image>
+          <text>已完成</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="features">
+    <view class="features-top">
+      <view class="features-name">其他功能</view>
+    </view>
+    <view class="features-content">
+      <navigator hover-class="none" bindtap="goToregion">
+        <image src="https://lw.gyfledu.com/upload/images/zhu@2x.png"></image>
+        <text>商家入驻</text>
+      </navigator>
+      <navigator hover-class="none" open-type="navigate" url="/pages/evaluate/evaluate">
+        <image src="https://lw.gyfledu.com/upload/images/pingjia@2x.png"></image>
+        <text>我的评价</text>
+      </navigator>
+      <navigator hover-class="none" open-type="navigate" url="/pages/point/point">
+        <image src="https://lw.gyfledu.com/upload/images/jilu@2x.png"></image>
+        <text>积分历史</text>
+      </navigator>
+    </view>
+  </view>
+</view>

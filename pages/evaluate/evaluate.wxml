@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="box">
+    <view class="top">
+      <view class="{{currentTabsIndex == 1?'active':''}}" data-current="1" bindtap="tap">
+        <text>已评价</text>
+        <lable></lable>
+      </view>
+      <view class="{{currentTabsIndex == 2?'active':''}}" data-current="2" bindtap="tap">
+        <text>待评价</text>
+        <lable></lable>
+      </view>
+    </view>
+  </view>
+  <view class="card" wx:for="{{evaluateLists}}" wx:key="index">
+    <view class="card-top">
+      <view class="topr">
+        <image class="topr-img" src="{{item.pic_cover_small}}" alt="" />
+        <view class="topr-txt">{{item.shop_name}}</view>
+        <image class="topr-image" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      </view>
+      <view class="topl">
+        {{item.is_evaluate == 0? '待评价':''}}{{item.is_evaluate == 1? '已评价 ':''}}
+      </view>
+    </view>
+    <view class="shop">
+      <image class="shop-image" src="{{item.pic_cover_micro}}" alt="" />
+      <view class="shop-right">
+        <view class="shop-name">{{item.goods_name}}</view>
+        <view class="shop-price">
+          ￥
+          <text>{{item.pay_money}}</text>
+        </view>
+        <view class="num">x{{item.num}}</view>
+      </view>
+      <view class="btn {{item.is_evaluate == 1? 'hidden':''}}" bindtap="gotoevaluate" data-index="{{index}}" >
+        {{item.is_evaluate == 0? '去评价':''}}
+      </view>
+    </view>
+  </view>
+</view>

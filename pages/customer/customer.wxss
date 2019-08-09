@@ -1,0 +1,118 @@
+.banner{
+  width: 750rpx;
+  height:485rpx;
+}
+.wx-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bgc {
+  height: 664rpx;
+  width: 630rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgc-bgc {
+  height: 664rpx;
+  width: 630rpx;
+}
+
+.bgc-top {
+  height: 227rpx;
+  width: 274rpx;
+  position: absolute;
+  left: -160rpx;
+  top: -65rpx;
+}
+
+.twoma {
+  position: absolute;
+  left: 146rpx;
+  top: 30rpx;
+  text-align: center;
+}
+
+.twoma image {
+  width: 245rpx;
+  height: 245rpx;
+  border: 20rpx solid #ccf2e3;
+}
+
+.twoma text {
+  font-size: 22rpx;
+  color: #999999;
+  display: block;
+}
+
+.line {
+  height: -1rpx;
+  width: 552rpx;
+  border: 1rpx dashed #f2f2f2;
+  position: absolute;
+  left: 38rpx;
+  top: 387rpx;
+}
+
+.bgc-left {
+  height: 140rpx;
+  width: 140rpx;
+  text-align: center;
+  position: absolute;
+  left: 90rpx;
+  bottom: 110rpx;
+}
+
+.bgc-left image {
+  height: 90rpx;
+  width: 90rpx;
+}
+
+.bgc-left text {
+  font-size: 28rpx;
+  display: block;
+}
+
+.bgc-right {
+  height: 140rpx;
+  width: 140rpx;
+  text-align: center;
+  position: absolute;
+  right: 90rpx;
+  bottom: 110rpx;
+}
+
+.bgc-right image {
+  height: 90rpx;
+  width: 90rpx;
+}
+
+.bgc-right text {
+  font-size: 28rpx;
+  display: block;
+}
+
+.delete {
+  height: 86rpx;
+  width: 86rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30rpx;
+}
+
+button::after {
+  border: none;
+}
+
+button {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 5rpx;
+  background-color: #FFF;
+  background-image: url(https://lw.gyfledu.com/upload/images/weixin_03.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

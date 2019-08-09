@@ -1,0 +1,23 @@
+.point {
+  height: 85rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.point-time {
+  font-size: 24rpx;
+}
+
+.point-name {
+  font-size: 24rpx;
+  width: 350rpx;
+}
+
+.point-num {
+  color: #00bc71;
+  font-size: 24rpx;
+  width: 50rpx;
+}

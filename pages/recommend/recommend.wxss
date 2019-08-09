@@ -1,0 +1,19 @@
+.conter {
+  padding:0 30rpx;
+}
+.recommend-conter {
+  margin-top: 24rpx;
+}
+
+.recommend-conter image {
+  width: 690rpx;
+  height: 256rpx;
+  border-radius: 10rpx;
+}
+
+.recommend-conter text {
+  font-size: 26rpx;
+  font-weight: 700;
+  display: block;
+  color: #333333;
+}

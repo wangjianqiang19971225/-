@@ -1,0 +1,88 @@
+.conter {
+  background-color: #f1f1f1;
+  padding: 20rpx 0;
+
+}
+
+.name {
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #fafafb;
+  overflow: hidden;
+}
+
+.left {
+  float: left;
+  width: 257rpx;
+}
+
+.input {
+  height: 88rpx;
+  width: 433rpx;
+  float: left;
+  font-size: 28rpx;
+}
+
+.right {
+  float: left;
+  height: 88rpx;
+  width: 433rpx;
+  line-height: 88rpx;
+  position: relative;
+}
+.right-l{
+  display: flex;
+  align-items: center;
+}
+.position {
+  height: 24rpx;
+  width: 24rpx;
+}
+
+.txt {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.right-r {
+  height: 24rpx;
+  width: 14rpx;
+  position: absolute;
+  right: 0rpx;
+  top:35rpx;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #fafafb;
+  position: relative;
+}
+.card-img {
+  height: 24rpx;
+  width: 14rpx;
+}
+.btn {
+  height: 80rpx;
+  width: 690rpx;
+  margin: 0 30rpx;
+  border-radius: 10rpx;
+  background-color: #00bc71;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 60rpx;
+}
+.ruimg{
+  position: absolute;
+  right: 90rpx;
+  top: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 2px 2px;
+}

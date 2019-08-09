@@ -1,0 +1,7 @@
+<view class="page">
+  <view class="point" wx:for="{{history}}" wx:key="index">
+    <view class="point-time">{{item.create_time}}</view>
+    <view class="point-name">{{item.text}}</view>
+    <view class="point-num">+{{item.number}}</view>
+  </view>
+</view>

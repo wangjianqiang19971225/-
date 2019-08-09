@@ -1,0 +1,154 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.5",
+	"appid": "wx157da91b0d151461",
+	"projectname": "liuwa",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": 0,
+					"name": "提交订单",
+					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "区域管家",
+					"pathName": "pages/navs/region",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "全部订单",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分历史",
+					"pathName": "pages/point/point",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的评价",
+					"pathName": "pages/evaluate/evaluate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家入驻",
+					"pathName": "pages/stable/stable",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "店铺详情",
+					"pathName": "pages/details/details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购买详情",
+					"pathName": "pages/buy/buy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "授权登陆",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提交订单",
+					"pathName": "component/popup/popup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "订单详情",
+					"pathName": "pages/order/orderlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "安全隐患",
+					"pathName": "pages/application/application",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "pages/product/product",
+					"pathName": "pages/product/product",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

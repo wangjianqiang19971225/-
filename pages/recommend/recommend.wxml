@@ -1,0 +1,6 @@
+<view class="conter">
+  <navigator class="recommend-conter" hover-class="none" url="/pages/details/details?shop_id={{item.shop_id}}" open-type="navigate" wx:for="{{recomendList}}" wx:key="index">
+    <image src="{{item.shop_banner}}" alt="" />
+    <text>{{item.shop_keywords}}</text>
+  </navigator>
+</view>

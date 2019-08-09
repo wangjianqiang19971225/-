@@ -1,0 +1,108 @@
+<view class="page">
+  <image class="detailsimg" src="{{detailsList.pic_cover_mid}}"></image>
+  <view class="details">
+    <view class="details-conter">
+      <view class="top">
+        <view class="name">
+          <text>{{detailsList.goods_name}}</text>
+          <text class="name-b">{{detailsList.introduction}}</text>
+        </view>
+        <view class="star">
+          <text class="star-num">5.0分</text>
+          <view class="star-s">
+            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
+            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
+            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
+            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
+            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="details-time">
+        <view class="details-time-top">
+          <view class="top-time">
+            正常营业:
+            <text>{{detailsList.live_time}}</text>
+          </view>
+          <image class="btn" bindtap="call" src="https://lw.gyfledu.com/upload/images/bofang@2x.png"></image>
+        </view>
+        <view class="conter-time">
+          适合年龄:
+          <text>{{detailsList.suit_age}}岁</text>
+        </view>
+        <view class="details-time-bot">
+          <view class="top-time">
+            场地大小:
+            <text>{{detailsList.shop_size}}</text>
+          </view>
+          <view class="distance">距离我1.5km</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="location">
+    <view class="location-left">
+      <image class="location-img" src="https://lw.gyfledu.com/upload/images/dinwei.png"></image>
+      <text class="location-txt">{{detailsList.live_store_address}}</text>
+    </view>
+    <!-- <image class="location-rigth" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png"></image> -->
+  </view>
+  <view class="price">
+    <view class="price-left">{{detailsList.goods_name}}</view>
+    <view class="price-right">
+      ￥
+      <text>{{detailsList.price}}</text>
+    </view>
+  </view>
+  <view class="num">
+    <view class="num-left">数量</view>
+    <view class="num-right">
+      <image class="num-less" src="https://lw.gyfledu.com/upload/images/jie@2x.png" bindtap='minusCount'></image>
+      <text>{{goodsNum}}</text>
+      <image class="num-plus" src="https://lw.gyfledu.com/upload/images/jia@2x.png" bindtap='addCount'></image>
+    </view>
+  </view>
+  <view class="notice">
+    <view class="recommend">
+      购买须知
+      <lable></lable>
+    </view>
+    <view class="notice-conter">
+      <view class="notice-conter-top">预约信息</view>
+      <view class="notice-conter-bot">
+        <lable></lable>
+        无需预约无需预约无需预约无需预约无需预约
+      </view>
+    </view>
+    <view class="notice-conter">
+      <view class="notice-conter-top">预约信息</view>
+      <view class="notice-conter-bot">
+        <lable></lable>
+        无需预约无需预约无需预约无需预约无需预约
+      </view>
+    </view>
+    <view class="notice-conter">
+      <view class="notice-conter-top">预约信息</view>
+      <view class="notice-conter-bot">
+        <lable></lable>
+        无需预约无需预约无需预约无需预约无需预约
+      </view>
+    </view>
+    <view class="notice-conter">
+      <view class="notice-conter-top">预约信息</view>
+      <view class="notice-conter-bot">
+        <lable></lable>
+        无需预约无需预约无需预约无需预约无需预约
+      </view>
+    </view>
+  </view>
+  <!-- 底部固定 -->
+  <view class="bottom">
+    <view class="bottom-right">
+      总价: <text>￥{{detailsList.price*goodsNum}}</text>
+    </view>
+    <view class="bottom-btn" bindtap="payment">
+      去付款
+    </view>
+  </view>
+</view>

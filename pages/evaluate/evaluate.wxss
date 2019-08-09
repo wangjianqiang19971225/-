@@ -1,0 +1,152 @@
+Page {
+  background-color: #f6f6f6;
+}
+
+/* 顶部导航 */
+.box {
+  height: 74rpx;
+}
+
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.top {
+  height: 74rpx;
+  /* background-color: red; */
+  display: flex;
+  width: 490rpx;
+  justify-content: space-between;
+  line-height: 74rpx;
+  font-size: 28rpx;
+  padding: 0 130rpx;
+  color: #333333;
+  border-bottom: 1rpx solid #fafafb;
+  padding-bottom: 7rpx;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.active {
+  text-align: center;
+}
+
+.active text {
+  font-size: 30rpx;
+  font-weight: 700;
+  display: block;
+}
+
+.active lable {
+  height: 6rpx;
+  width: 44rpx;
+  margin: 0 auto;
+  background-color: #00bc71;
+  display: block;
+  border-radius: 3rpx;
+}
+
+.card {
+  background-color: #fff;
+  margin: 30rpx;
+  border-radius: 10rpx;
+  padding: 20rpx 30rpx 0rpx 30rpx;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topr-img {
+  height: 37rpx;
+  width: 37rpx;
+  border-radius: 10rpx;
+}
+
+.topr-txt {
+  font-size: 26rpx;
+  margin: 0 20rpx;
+}
+
+.topr-image {
+  height: 24rpx;
+  width: 12rpx;
+}
+
+.topl {
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.shop {
+  padding: 30rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f6f6f6;
+  position: relative;
+}
+
+.shop-image {
+  height: 167rpx;
+  width: 167rpx;
+  border-radius: 10rpx;
+}
+
+.shop-right {
+  height: 167rpx;
+  width: 428rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.shop-name {
+  font-size: 30rpx;
+}
+
+.shop-price {
+  color: #ea2727;
+  font-size: 20rpx;
+}
+
+.shop-price text {
+  font-size: 32rpx;
+}
+
+.num {
+  font-size: 26rpx;
+  color: #999999;
+  position: absolute;
+  top: 53rpx;
+  right: 0;
+}
+
+.btn {
+  height: 50rpx;
+  width: 123rpx;
+  background-color: #00bc71;
+  font-size: 30rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 30rpx;
+  right: 0rpx;
+}

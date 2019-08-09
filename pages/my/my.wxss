@@ -1,0 +1,161 @@
+Page {
+  background-color: #f7f7f7;
+}
+
+/* .conter {
+  padding:  0 30rpx;
+} */
+.my-header {
+  height: 300rpx;
+  padding: 0 30rpx;
+  background-image:url(https://lw.gyfledu.com/upload/images/bizhi.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.my-img {
+  height: 121rpx;
+  width: 121rpx;
+  border-radius: 100%;
+  border: 5rpx solid #fff;
+  margin-top: 70rpx;
+  float: left;
+}
+
+.my-right {
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 90rpx;
+}
+
+.my-name {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+}
+
+.my-integral {
+  font-size: 28rpx;
+  color: #fff;
+  display: block;
+  margin-top: 15rpx;
+}
+
+.order {
+  height: 200rpx;
+  position: relative;
+}
+
+.order-son {
+  height: 245rpx;
+  width: 690rpx;
+  background-color: #fff;
+  position: absolute;
+  top: -44rpx;
+  border-radius: 20rpx;
+  margin-left: 30rpx;
+}
+
+.order-top {
+  margin-top: 30rpx;
+  padding: 0 30rpx;
+  overflow: hidden;
+}
+
+.order-name {
+  float: left;
+  font-size: 28rpx;
+  font-weight: 700;
+
+}
+
+.orde-all {
+  float: right;
+  font-size: 24rpx;
+  color: #999999;
+  margin-right: 21rpx;
+}
+
+.orde-img {
+  height: 24rpx;
+  width: 14rpx;
+  float: right;
+  margin-top: 5rpx;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 30rpx;
+  margin-top: 50rpx; */
+  overflow: hidden;
+  padding: 0 50rpx;
+  margin-top: 25rpx;
+}
+
+.content navigator {
+  width: 100rpx;
+  height: 150rpx;
+  float: left;
+  display: block;
+}
+
+.content text {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #333333;
+  display: block;
+}
+
+.content image {
+  height: 50rpx;
+  width: 50rpx;
+  margin-left: 15rpx;
+  margin-top: 24rpx;
+}
+.features {
+  height: 245rpx;
+  width: 690rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-left: 30rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  margin-top: 50rpx;
+}
+.features-name {
+  font-size: 28rpx;
+  font-weight: 700;
+
+}
+.features-content {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 30rpx;
+  margin-top: 50rpx; */
+  overflow: hidden;
+  padding: 0 10rpx;
+  margin-top: 25rpx;
+  text-align: center;
+}
+.features-content navigator {
+  /* width: 110rpx; */
+  height: 150rpx;
+  float: left;
+  display: block;
+}
+
+.features-content text {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #333333;
+  display: block;
+}
+
+.features-content image {
+  height: 50rpx;
+  width: 50rpx;
+  /* margin-left: 25rpx; */
+  margin-top: 24rpx;
+}

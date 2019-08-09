@@ -1,0 +1,276 @@
+image {
+  height: 100%;
+  width: 100%;
+}
+.conter {
+  margin: 0 30rpx;
+
+}
+
+/* 顶部搜索 */
+.top {
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.location {
+  width: 116rpx;
+  float: left;
+  height: 64rpx;
+  line-height: 64rpx;
+
+}
+
+.location-txt {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.location-img {
+  height: 16rpx;
+  width: 28rpx;
+  margin-left: 15rpx;
+}
+
+.search {
+  height: 64rpx;
+  width: 553rpx;
+  border-radius: 64rpx;
+  background-color: #f7f7f7;
+  text-align: center;
+  line-height: 64rpx;
+  font-size: 28rpx;
+  color: #b9b9b9;
+  position: relative;
+  float: right;
+}
+
+.search-txt {
+  margin-left: 20rpx;
+}
+.hidden{
+  display: none !important;
+}
+.show{
+  display: block !important;
+}
+
+.search-img {
+  height: 29rpx;
+  width: 29rpx;
+  position: absolute;
+  top: 18rpx;
+  left: 100rpx;
+}
+
+/* 轮播图 */
+.banner {
+  width: 690rpx;
+  height: 256rpx;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+}
+
+.banner navigator {
+  width: 100%;
+  height: 100%;
+
+}
+
+/* 导航 */
+.navs {
+  display: flex;
+  justify-content: space-between;
+  margin: 30rpx;
+  margin-top: 50rpx;
+}
+
+.navs navigator {
+  width: 112rpx;
+  height: 138rpx;
+}
+
+.navs text {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #333333;
+}
+
+.navs image {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 80rpx;
+  margin-left: 15rpx;
+}
+
+/* 推荐 */
+.recommend {
+  position: relative;
+  height: 32rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  padding: 14rpx;
+  line-height: 32rpx;
+  margin-top: 40rpx;
+}
+
+.recommend lable {
+  position: absolute;
+  height: 44rpx;
+  width: 6rpx;
+  border-radius: 10rpx;
+  background-color: #00bc71;
+  left: 0;
+  top: 10rpx;
+}
+
+.recommend navigator {
+  font-size: 22rpx;
+  font-weight: 400;
+  color: #666666;
+  position: absolute;
+  right: 24rpx;
+  top: 13rpx;
+}
+.recommend image {
+  height: 24rpx;
+  width: 12rpx;
+  position: absolute;
+  right: -14rpx;
+  top:5rpx;
+}
+.recommend-conter {
+  margin-top: 24rpx;
+}
+.recommend-conter image {
+  width: 690rpx;
+  height: 256rpx;
+  border-radius: 10rpx;
+}
+.recommend-conter text {
+  font-size: 26rpx;
+  font-weight: 700;
+  display: block;
+  color: #333333;
+}
+.wx-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bgc {
+  height: 664rpx;
+  width: 630rpx;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin-top: 200rpx;
+}
+
+.bgc-bgc {
+  height: 664rpx;
+  width: 630rpx;
+}
+
+.bgc-top {
+  height: 227rpx;
+  width: 274rpx;
+  position: absolute;
+  left: -160rpx;
+  top: -65rpx;
+}
+
+.twoma {
+  position: absolute;
+  left: 184rpx;
+  top: 56rpx;
+  text-align: center;
+}
+
+.twoma image {
+  width: 245rpx;
+  height: 245rpx;
+  border: 20rpx solid #ccf2e3;
+}
+
+.twoma text {
+  font-size: 22rpx;
+  color: #999999;
+  display: block;
+}
+
+.line {
+  height: -1rpx;
+  width: 552rpx;
+  border: 1rpx dashed #f2f2f2;
+  position: absolute;
+  left: 38rpx;
+  top: 387rpx;
+}
+
+.bgc-left {
+  height: 140rpx;
+  width: 140rpx;
+  text-align: center;
+  position: absolute;
+  left: 90rpx;
+  bottom: 30rpx;
+}
+
+.bgc-left image {
+  height: 90rpx;
+  width: 90rpx;
+}
+
+.bgc-left text {
+  font-size: 28rpx;
+  display: block;
+}
+
+.bgc-right {
+  height: 140rpx;
+  width: 140rpx;
+  text-align: center;
+  position: absolute;
+  right: 90rpx;
+  bottom: 30rpx;
+}
+
+.bgc-right image {
+  height: 90rpx;
+  width: 90rpx;
+}
+
+.bgc-right text {
+  font-size: 28rpx;
+  display: block;
+}
+
+.delete {
+  height: 86rpx;
+  width: 86rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30rpx;
+}
+
+button::after {
+  border: none;
+}
+
+button {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 5rpx;
+  background-color: #FFF;
+  background-image: url(https://lw.gyfledu.com/upload/images/weixin_03.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

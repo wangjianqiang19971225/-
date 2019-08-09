@@ -1,0 +1,39 @@
+<view class="page">
+  <form action="" bindsubmit="formSubmit">
+    <view class="conter">
+      <view class="name">
+        <view class="left">申请人</view>
+        <input type="text" class="input" placeholder="请输入申请人真实姓名"  name='name' value='{{form.name}}' focus="true" maxlength="11" type="text" />
+      </view>
+      <view class="name">
+        <view class="left">联系电话</view>
+        <input type="text" class="input" name='phone' type='number'maxlength="11" value='{{form.phone}}' placeholder="请输入您的手机号" />
+      </view>
+      <view class="name">
+        <view class="left">详细地址</view>
+        <input type="text" class="input" name='address' value='{{form.address}}' placeholder="请输入详细地址" />
+      </view>
+      <view class="name">
+        <view class="left">申请区域</view>
+        <view class="right" bindtap="getLocation">
+          <view class="right-l">
+            <image class="position" src="https://lw.gyfledu.com/upload/images/dinwei.png" alt="" />
+            <view class="txt">{{LocationList}}</view>
+          </view>
+          <image class="right-r" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+        </view>
+      </view>
+    </view>
+    <view class="card" bindtap='getcamera2'>
+      <view class="card-name">身份证正面上传</view>
+      <image class='ruimg' src='{{img2}}'></image>
+      <image class="card-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+    </view>
+    <view class="card" bindtap='getcamera3'>
+      <view class="card-name">身份证背面上传</view>
+      <image class='ruimg' src='{{img3}}'></image>
+      <image class="card-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+    </view>
+    <button class="btn" form-type="submit">申请</button>
+  </form>
+</view>

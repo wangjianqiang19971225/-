@@ -1,0 +1,138 @@
+Page {
+  background-color: #f6f6f6;
+}
+
+.shop {
+  padding: 40rpx 30rpx 40rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f6f6f6;
+  position: relative;
+  background-color: #fff;
+  margin: 30rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+
+.shop-image {
+  height: 129rpx;
+  width: 167rpx;
+  border-radius: 10rpx;
+}
+
+.shop-right {
+  height: 116rpx;
+  width: 428rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.shop-name {
+  font-size: 30rpx;
+}
+
+.shop-price {
+  color: #ea2727;
+  font-size: 20rpx;
+}
+
+.shop-price text {
+  font-size: 32rpx;
+}
+
+.num {
+  font-size: 26rpx;
+  color: #999999;
+  position: absolute;
+  top: 53rpx;
+  right: 0;
+}
+
+.name {
+  background-color: #fff;
+  padding:30rpx;
+  border-bottom: 2rpx solid #fafafb;
+}
+.name-rigth {
+  margin-left: 130rpx;
+  font-size: 30rpx;
+  color: #ea2727;
+}
+.name-conter {
+  margin-left: 200rpx;
+}
+.name-left {
+  font-size: 30rpx;
+}
+.recommend {
+  height: 148rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  width: 750rpx;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.recommend-top {
+  font-size: 30rpx;
+}
+.recommend-name {
+  margin-top: 10rpx;
+}
+.recommend-img {
+  height: 26rpx;
+  width: 18rpx;
+
+}
+.recommend-txt {
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+.recommend-po {
+  width: 62rpx;
+  height: 62rpx;
+  position: absolute;
+  top: 45rpx;
+  right: 30rpx;
+}
+.news {
+  /* height: 240rpx; */
+  background-color: #fff;
+  padding: 30rpx;
+  width: 750rpx;
+  margin-top: 10rpx;
+  box-sizing: border-box;
+}
+.news-top {
+  font-size: 30rpx;
+}
+.news-conter {
+display: flex;
+justify-content: space-between;
+margin-top: 20rpx;
+}
+.news-left {
+  font-size: 24rpx;
+  color: #666666;
+  width: 100rpx;
+  display: block
+}
+.news-right {
+  width: 570rpx;
+  font-size: 24rpx;
+  color: #666666;
+}
+.btn {
+  width: 690rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  margin: 30rpx;
+  background-color: #00bc71;
+  color: #fff;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}

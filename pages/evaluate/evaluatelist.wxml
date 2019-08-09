@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="shop">
+    <image class="shop-image" src="{{orderlist.pic_cover_small}}" alt="" />
+    <view class="shop-right">
+      <view class="shop-name">{{orderlist.goods_name}}</view>
+      <view class="shop-price">
+        ￥
+        <text>{{orderlist.price}}</text>
+      </view>
+      <view class="num">x{{orderlist.num}}</view>
+    </view>
+  </view>
+  <view class="news">
+    <view class="news-top">订单信息</view>
+    <view class="news-conter">
+      <text class="news-left">订单号:</text>
+      <text class="news-right">{{orderlist.order_no}}</text>
+    </view>
+    <view class="news-conter">
+      <text class="news-left">数量:</text>
+      <text class="news-right">{{orderlist.num}}</text>
+    </view>
+    <view class="news-conter">
+      <text class="news-left">价格:</text>
+      <text class="news-right">￥{{orderlist.pay_money}}</text>
+    </view>
+  </view>
+  <view class="star">
+    <view class="star-box">
+      <view class="star-left">评价:</view>
+      <view class="star-star">
+        <block wx:for="{{one_2}}" wx:key="index">
+          <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='https://lw.gyfledu.com/upload/images/xing@2x.png'></image>
+        </block>
+        <block wx:for="{{two_2}}" wx:key="index">
+          <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='https://lw.gyfledu.com/upload/images/xing1@2x.png'></image>
+        </block>
+      </view>
+    </view>
+    <view class="star-right">评价订单送2积分</view>
+  </view>
+  <view class="btn" bindtap="getorder">提交</view>
+</view>

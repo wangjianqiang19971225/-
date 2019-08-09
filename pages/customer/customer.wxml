@@ -1,0 +1,20 @@
+<view class="page">
+  <image class="banner" src="https://lw.gyfledu.com/upload/images/fenxiang1.png"></image>
+  <view class="wx-popup">
+    <view class="bgc">
+      <view class="twoma">
+        <image src="{{scerweima}}"></image>
+        <text>成功邀请新用户注册可获得5积分奖励</text>
+      </view>
+      <view class="line"></view>
+      <view class="bgc-left" bindtap='save'>
+        <image src="https://lw.gyfledu.com/upload/images/xiangce@2x(1).png"></image>
+        <text>保存至相册</text>
+      </view>
+      <view class="bgc-right">
+        <button class="btn" hover-class="none" open-type="share" type=""></button>
+        <text>分享至好友</text>
+      </view>
+    </view>
+  </view>
+</view>

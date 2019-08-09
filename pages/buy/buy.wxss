@@ -1,0 +1,269 @@
+Page {
+  background-color: #fafafb;
+}
+
+
+.detailsimg {
+  height: 407rpx;
+  width: 750rpx;
+}
+
+.details {
+  height: 292rpx;
+  position: relative;
+
+}
+
+.details-conter {
+  height: 316rpx;
+  width: 750rpx;
+  background-color: #fff;
+  border-radius: 30rpx 30rpx 0 0;
+  /* padding: 30rpx; */
+  position: absolute;
+  top: -30rpx;
+}
+
+.top {
+  height: 130rpx;
+  border-bottom: 2rpx solid #fafafb;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.name {
+  font-size: 30rpx;
+}
+
+.name-b {
+  font-size: 24rpx;
+  color: #999999;
+  display: block;
+  margin-top: 5rpx;
+}
+
+.star {
+  width: 146rpx;
+  height: 74rpx;
+  text-align: center;
+}
+
+.star-num {
+  font-size: 36rpx;
+  color: #f29316;
+  /* display: block; */
+}
+
+.star-s {
+  display: flex;
+  justify-content: space-between;
+}
+
+.star-s image {
+  height: 24rpx;
+  width: 24rpx;
+}
+
+.details-time {
+  height: 186rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.details-time-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-time {
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.top-time text {
+  color: #999999;
+}
+
+.btn {
+  height: 60rpx;
+  width: 60rpx;
+  margin-top: -14rpx;
+}
+
+.distance {
+  font-size: 24rpx;
+  color: #00bc71;
+}
+
+.conter-time {
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.conter-time text {
+  color: #999999;
+}
+
+.details-time-bot {
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location {
+  height: 84rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  align-items: center;
+}
+
+.location-img {
+  height: 26rpx;
+  width: 18rpx;
+}
+
+.location-txt {
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+
+.location-rigth {
+  height: 24rpx;
+  width: 14rpx;
+}
+
+.price {
+  height: 85rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #fafafb;
+  background-color: #fff;
+  margin-top: 1rpx;
+}
+
+.price-left {
+  font-size: 28rpx;
+}
+
+.price-right {
+  font-size: 22rpx;
+  color: #f29316;
+}
+
+.price-right text {
+  font-size: 34rpx;
+}
+
+.num {
+  height: 85rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #fafafb;
+  background-color: #fff;
+}
+
+.num-left {
+  font-size: 28rpx;
+}
+.num-right {
+  width: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.num-right text {
+  font-size: 32rpx;
+}
+.num-less {
+  height: 32rpx;
+  width: 32rpx;
+}
+.num-plus {
+  height: 32rpx;
+  width: 32rpx;
+}
+.notice {
+  padding: 0 30rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #fafafb;
+  margin-bottom: 90rpx;
+
+}
+.recommend {
+  position: relative;
+  height: 90rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  padding: 20rpx;
+  line-height: 90rpx;
+  border-bottom: 1rpx solid #fafafb;
+  margin-bottom: 20rpx;
+}
+
+.recommend lable {
+  position: absolute;
+  height: 44rpx;
+  width: 6rpx;
+  border-radius: 10rpx;
+  background-color: #00bc71;
+  left: 0;
+  top: 43rpx;
+}
+.notice-conter {
+  margin-bottom: 30rpx;
+}
+.notice-conter-top{
+  font-size: 28rpx;
+  color: #999999;
+  margin-bottom: 20rpx;
+}
+.notice-conter-bot {
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+.notice-conter-bot lable {
+  height: 7rpx;
+  width: 7rpx;
+  border-radius: 7rpx;
+  display: block;
+  background-color: #a0a0a0;
+  margin-right: 20rpx;
+}
+/* 底部固定 */
+.bottom {
+  height: 90rpx;
+  width: 750rpx;
+  border-top: 1rpx solid #fafafb;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-right {
+  font-size: 30rpx;
+  color:#ea2727;
+}
+.bottom-btn{
+  height: 90rpx;width: 260rpx;
+  background-color: #00bc71;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+}

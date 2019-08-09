@@ -1,0 +1,91 @@
+<view class="page">
+  <view class="conter">
+    <!-- 顶部搜索 -->
+    <view class="top">
+      <view class="location" bindtap="getLocation">
+        <text class="location-txt">{{LocationList}}</text>
+        <image class="location-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x.png" alt="" />
+      </view>
+      <navigator class="search" hover-class="none" url="/pages/search/search" open-type="navigate">
+        <text class="search-txt">搜索商户名、地点、课程</text>
+        <image class="search-img" src="https://lw.gyfledu.com/upload/images/sousuo@2x.png" alt="" />
+      </navigator>
+    </view>
+    <!-- 轮播图 -->
+    <swiper class="banner" autoplay indicator-dots indicator-color="rgba(255, 255, 255, 0.6)" indicator-active-color="#fff" circular interval="5000">
+      <swiper-item wx:for="{{bannerlist}}" wx:key="index">
+        <navigator hover-class="none" url="/pages/details/details?shop_id={{item.shop_id}}" open-type="navigate">
+          <image mode src="{{item.adv_image}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+    <!-- 导航 -->
+    <view class="navs">
+      <navigator hover-class="none" url="/pages/navs/surrounding" open-type="navigate">
+        <image src="https://lw.gyfledu.com/upload/images/weizhi@2x.png"></image>
+        <text>周边遛娃</text>
+      </navigator>
+      <navigator hover-class="none" url="/pages/navs/navs" open-type="navigate">
+        <image src="https://lw.gyfledu.com/upload/images/qingzixueyuan@2x.png"></image>
+        <text>课外辅导</text>
+      </navigator>
+      <navigator hover-class="none" hover-class="none" bindtap="goToregion">
+        <image src="https://lw.gyfledu.com/upload/images/quyuguanjia@2x.png"></image>
+        <text>区域管家</text>
+      </navigator>
+      <navigator hover-class="none" bindtap="goTomember">
+        <image src="https://lw.gyfledu.com/upload/images/huiyuan@2x.png"></image>
+        <text>会员中心</text>
+      </navigator>
+    </view>
+    <!-- 推荐 -->
+    <view class="recommend">
+      周边推荐
+      <lable></lable>
+      <navigator hover-class="none" url="/pages/recommend/recommend" open-type="navigate">
+        查看更多
+        <image src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      </navigator>
+    </view>
+    <!-- 推荐内容 -->
+    <navigator class="recommend-conter" hover-class="none" url="/pages/details/details?shop_id={{item.shop_id}}" open-type="navigate" wx:for="{{recomendList}}" wx:key="index">
+      <image src="{{item.shop_banner}}" alt="" />
+      <text>{{item.shop_keywords}}</text>
+    </navigator>
+    <!-- 推荐 -->
+    <view class="recommend">
+      限时优惠
+      <lable></lable>
+      <navigator hover-class="none" url="/pages/limited/limited" open-type="navigate">
+        查看更多
+        <image src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      </navigator>
+    </view>
+    <!-- 推荐内容 -->
+    <navigator class="recommend-conter" hover-class="none" url="/pages/details/details?shop_id={{item.shop_id}}" open-type="navigate" wx:for="{{timecourseList}}" wx:key="index">
+      <image src="{{item.shop_banner}}" alt="" />
+      <text>{{item.shop_keywords}}</text>
+    </navigator>
+  </view>
+  <view class="wx-popup {{show == 1?'show':'hidden'}}">
+    <view class="bgc">
+      <image class="bgc-bgc" src="https://lw.gyfledu.com/upload/images/ban@2x.png"></image>
+      <image class="bgc-top" src="https://lw.gyfledu.com/upload/images/fengxizang@2x.png"></image>
+      <view class="twoma">
+        <image src="{{scerweima}}"></image>
+        <text>扫码加客服微信</text>
+      </view>
+      <view class="line"></view>
+      <view class="bgc-left" bindtap="call">
+        <image src="https://lw.gyfledu.com/upload/images/bofang@2x.png"></image>
+        <text>电话客服</text>
+      </view>
+      <view class="bgc-right">
+        <button class="btn" hover-class="none" open-type="contact" type="" session-from=''></button>
+        <text>微信客服</text>
+      </view>
+    </view>
+    <image class="delete" src="https://lw.gyfledu.com/upload/images/guanbi@2x.png" bindtap="delete"></image>
+  </view>
+
+</view>
