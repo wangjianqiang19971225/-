@@ -1,6 +1,7 @@
 Page {
   background-color: #fafafb;
 }
+
 .tishi {
   width: 750rpx;
   text-align: center;
@@ -8,6 +9,7 @@ Page {
   color: #666666;
   margin-top: 50rpx;
 }
+
 .show {
   display: block !important;
 }
@@ -19,31 +21,35 @@ Page {
 .top-img {
   position: relative;
 }
+
 .detailsimg {
   height: 407rpx;
   width: 750rpx;
 
 }
+
 .detailsimg-shang {
-  height: 86rpx;
-  width: 80rpx;
+  height: 126rpx;
+  width: 120rpx;
   position: absolute;
   right: 30rpx;
-  bottom: 110rpx;
+  top: 70rpx;
+  z-index: 1;
 }
+
 .detailsimg-tou {
-  height: 90rpx;
+  height: 54rpx;
   width: 750rpx;
   font-size: 20rpx;
-  color: #818180;
-  border-radius: 20rpx;
+  color: #333333;
+  line-height: 54rpx;
+  text-align: center;
   position: absolute;
   right: 0rpx;
-  bottom: 0rpx;
-  padding:  15rpx 30rpx 0rpx 30rpx;
+  top: 0rpx;
   background: rgba(233, 233, 233, 0.8);
-  box-sizing: border-box;
 }
+
 .details {
   height: 292rpx;
   position: relative;
@@ -133,7 +139,8 @@ Page {
   line-height: 47rpx;
   text-align: center;
 }
-.btn-ipone{
+
+.btn-ipone {
   height: 62rpx;
   width: 62rpx;
   margin-top: -14rpx;
@@ -221,7 +228,7 @@ Page {
 /* 店家简介 */
 .synopsis {
   background-color: #fff;
-  padding: 30rpx 30rpx 0 30rpx;
+  padding: 10rpx 30rpx;
 }
 
 .synopsis-item {
@@ -233,14 +240,12 @@ Page {
 .synopsis-time {
   font-size: 24rpx;
   color: #666666;
-  margin-bottom: 30rpx;
 }
 
 .synopsis-txt {
   color: #999999;
   font-size: 24rpx;
   width: 568rpx;
-  margin-bottom: 30rpx;
 }
 
 .shop {
@@ -268,13 +273,22 @@ Page {
   top: 13rpx;
 }
 
+.recommend-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .recommend-conter {
+  width: 340rpx;
   margin-top: 24rpx;
-  border-bottom: 1rpx solid #fafafb;
+  border: 1rpx solid #fafafb;
+  background-color: #fafafb;
+  border-radius: 10rpx;
 }
 
 .recommend-conter image {
-  width: 690rpx;
+  width: 340rpx;
   height: 256rpx;
   border-radius: 10rpx;
 }
@@ -284,7 +298,8 @@ Page {
   font-weight: 700;
   display: block;
   color: #333333;
-  margin-bottom: 40rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
 }
 
 .shop-conter {
@@ -390,6 +405,7 @@ Page {
 .item-bottom {
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
   margin-top: 20rpx;
 }
 
@@ -420,14 +436,16 @@ Page {
 /* 教学记录*/
 .control {
   background-color: #fff;
-  padding:30rpx 30rpx 0rpx 30rpx;
+  padding: 30rpx 30rpx 0rpx 30rpx;
   border-bottom: 1rpx solid #fff;
 }
+
 .control2 {
   background-color: #fff;
   padding: 0rpx 30rpx;
   border-bottom: 1rpx solid #fff;
 }
+
 .point {
   height: 85rpx;
   border-bottom: 1rpx solid #fafafb;
@@ -445,6 +463,7 @@ Page {
   font-size: 24rpx;
   color: #666666;
 }
+
 .topr-image {
   height: 24rpx;
   width: 12rpx;

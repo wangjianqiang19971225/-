@@ -78,7 +78,7 @@ Page({
     }
     this.classsudy(name, phone, card1, txt, shop_id)
     this.showModal({
-      msg: '申请成功'
+      msg: '提交成功'
     })
     wx.navigateBack({
       delta: 1
@@ -100,7 +100,7 @@ Page({
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         // var tempFilePaths = res.tempFilePaths
         wx.uploadFile({
-          url: "https://lw.gyfledu.com/api/classstudy/upload", //这个方法就是后台处理上传的方法
+          url: "https://www.yizhiba.cn/api/classstudy/upload", //这个方法就是后台处理上传的方法
           filePath: res.tempFilePaths[0], //获取到上传的图片
           name: 'file',
           success: function (info) {

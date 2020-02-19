@@ -23,7 +23,10 @@
     "pages/order/orderlist",
     "pages/application/application",
     "pages/product/product",
-    "pages/supervisory/supervisory"
+    "pages/supervisory/supervisory",
+    "pages/information/information",
+    "pages/switchcity/switchcity",
+    "pages/product1/product1"
   ],
   "permission": {
     "scope.userLocation": {
@@ -33,7 +36,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "遛娃圈",
+    "navigationBarTitleText": "育娃参考",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

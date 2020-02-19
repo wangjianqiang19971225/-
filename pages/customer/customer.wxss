@@ -112,7 +112,7 @@ button {
   height: 90rpx;
   margin-bottom: 5rpx;
   background-color: #FFF;
-  background-image: url(https://lw.gyfledu.com/upload/images/weixin_03.png);
+  background-image: url(https://www.yizhiba.cn/upload/images/weixin_03.png);
   background-size: contain;
   background-repeat: no-repeat;
 }

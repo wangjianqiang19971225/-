@@ -12,6 +12,9 @@ Page({
     currentTabsIndex: 0,
     currentTabsId: '',
     getParkdetail:[],
+    title_image:[],
+    image:[],
+    show:0
   },
 
   /**
@@ -23,6 +26,8 @@ Page({
     this.setData({
       currentTabsIndex: options.id,
     })
+    console.log(options.id)
+    console.log(options.shop_id)
   },
 
   tap: function (e) {
@@ -45,6 +50,7 @@ Page({
     })
     const Index = this.data.currentTabsIndex
     const Park = this.data.getPark
+    console.log(Index)
     this.getParkdetail(Park[Index].id)
   },
   getParkdetail: async function (act_id) {
@@ -52,9 +58,22 @@ Page({
       act_id: act_id
     }
     let getParkdetail = await request('getParkdetail', data, true, 'POST')
-    console.log(getParkdetail.data)
+    console.log(getParkdetail)
     this.setData({
       getParkdetail: getParkdetail.data,
+      title_image: getParkdetail.data.title_image,
+      image: getParkdetail.data.image,
     })
+    console.log(getParkdetail.data.image)
+    if(getParkdetail.data.image == ''){
+      this.setData({
+        show: 1
+      })
+    }else {
+      this.setData({
+        show: 0
+      })
+    }
+    console.log(this.data.show)
   },
 })

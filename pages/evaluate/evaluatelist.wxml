@@ -30,10 +30,10 @@
       <view class="star-left">评价:</view>
       <view class="star-star">
         <block wx:for="{{one_2}}" wx:key="index">
-          <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='https://lw.gyfledu.com/upload/images/xing@2x.png'></image>
+          <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='https://www.yizhiba.cn/upload/images/xing@2x.png'></image>
         </block>
         <block wx:for="{{two_2}}" wx:key="index">
-          <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='https://lw.gyfledu.com/upload/images/xing1@2x.png'></image>
+          <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='https://www.yizhiba.cn/upload/images/xing1@2x.png'></image>
         </block>
       </view>
     </view>

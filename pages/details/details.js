@@ -2,6 +2,7 @@ import {
   request,
   regeneratorRuntime
 } from '../../utils/request.js'
+var app = getApp()
 Page({
 
   /**
@@ -21,19 +22,22 @@ Page({
     two_1: '',
     shop_group_id: '',
     shop_id: '',
-    index:'',
+    index: '',
+    phoneNumber: '',
+    hidden: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      hidden: app.globalData.hidden
+    })
     console.log(options.shop_id)
     this.setData({
       shop_id: options.shop_id
     })
-
   },
   gotoshang: function () {
     const shop_id = this.data.shop_id
@@ -66,15 +70,20 @@ Page({
   },
   Detail: async function (id, type) {
     let data = {
+      lat: wx.getStorageSync('lat'),
+      lng: wx.getStorageSync('lon'),
       shop_id: id,
       type: type
     }
     let Detail = await request('Detail', data, true, 'POST')
     console.log(Detail.data)
     this.setData({
-      detailList: Detail.data,
-      num: Detail.data.score
+      detailList: Detail.data[0],
+      num: Detail.data[0].score,
+      phoneNumber: Detail.data[0].shop_phone
+
     })
+    console.log(this.data.detailList)
     this.setData({
       one_1: this.data.num,
       two_1: 5 - this.data.num
@@ -123,6 +132,7 @@ Page({
     this.setData({
       detailList3: Detail.data.welfare
     })
+
   },
   Detail4: async function (id, type) {
     let data = {
@@ -156,7 +166,7 @@ Page({
     this.setData({
       detailList6: Detail.data
     })
-    if(Detail.data==''){
+    if (Detail.data == '') {
       this.setData({
         index: 1
       })
@@ -176,7 +186,21 @@ Page({
   },
   call: function () {
     wx.makePhoneCall({
-      phoneNumber: '1231215413'
+      phoneNumber: this.data.phoneNumber
     })
   },
+  product: function (e) {
+    const index = e.currentTarget.dataset.index
+    const shop_id = this.data.shop_id
+    wx.navigateTo({
+      url: "/pages/product/product?shop_id=" + shop_id + '&id=' + index
+    })
+  },
+  product1: function (e) {
+    const index = e.currentTarget.dataset.index
+    const shop_id = this.data.shop_id
+    wx.navigateTo({
+      url: "/pages/product1/product1?shop_id=" + shop_id + '&id=' + index
+    })
+  }
 })

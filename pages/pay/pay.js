@@ -30,6 +30,8 @@ Page({
   },
   buyNow: async function (id, num) {
     let data = {
+      lat: wx.getStorageSync('lat'),
+      lng: wx.getStorageSync('lon'),
       token: wx.getStorageSync('token'),
       goods_id: id,
       goods_num: num
@@ -39,7 +41,7 @@ Page({
     this.setData({
       payList: buyNow.data.goods_list,
       payListw: buyNow.data,
-      phoneNumber: buyNow.data.goods_list.live_store_tel,
+      phoneNumber: buyNow.data.receiver_mobile,
       receiver_mobile: buyNow.data.receiver_mobile,
       searchTxt: buyNow.data.receiver_mobile,
     })

@@ -1,5 +1,5 @@
 import regeneratorRuntime from './runtime.js'
-const baseHost = "https://lw.gyfledu.com/api/"
+const baseHost = "https://www.yizhiba.cn/api/"
 const baseUrl = {
   // gettest: baseHost + "/mock/5aded45053796b38dd26e970/comments#!method=get" // 测试接口
   // getOpenid: baseHost + "/page/wxpay/xcxlogin.html", // 获取openid
@@ -17,6 +17,7 @@ const baseUrl = {
   User: baseHost + "/user.index/detail",
   Search: baseHost + "/index/search",
   scerweima: baseHost + "/qrcodes/scerweima",
+  getindexscrmer: baseHost + "/qrcodes/getindexscrmer",
   pay: baseHost + "/user.order/pay",
   orderList: baseHost + "/user.order/detail",
   BusinessType: baseHost + "/Business/businessType",
@@ -31,6 +32,9 @@ const baseUrl = {
   shareInter: baseHost + "/user.Invite/shareInter",
   getParkdetail: baseHost + "/park/getParkdetail",
   getscrmer: baseHost + "/qrcodes/getscrmer",
+  getstudents: baseHost + "/Classes/getstudents",
+  getcustomer: baseHost + "/qrcodes/getcustomer",
+  getmanagerimgs: baseHost + "classstudy/getmimgs",
 }
 
 function request(url, postData = {}, toast = true, method = 'POST') {
@@ -49,7 +53,7 @@ function request(url, postData = {}, toast = true, method = 'POST') {
         if (toast) {
           wx.hideLoading()
         }
-        console.log(url + '返回成功：', data.data)
+        // console.log(url + '返回成功：', data.data)
         if (data.statusCode == 200) {
           resolve(data.data)
         }
@@ -71,8 +75,13 @@ function request(url, postData = {}, toast = true, method = 'POST') {
         // }
         if (data.data.code == -1) {
           wx.clearStorage()
-          wx.redirectTo({
-            url: '/pages/login/login'
+          wx.switchTab({
+            url: '/pages/my/my'
+          })
+          wx.showToast({
+            title: '请登录',
+            icon: 'none',
+            duration: 2000
           })
         }
         // if (data.data.status == 602 || data.data.message == '账号已在其他设备登录！') {
@@ -119,8 +128,8 @@ function request(url, postData = {}, toast = true, method = 'POST') {
         reject(err)
       }
     }
-    console.log('请求url：', url)
-    console.log('请求参数：', postData)
+    // console.log('请求url：', url)
+    // console.log('请求参数：', postData)
     if (toast) {
       wx.showLoading({
         title: '加载中...'

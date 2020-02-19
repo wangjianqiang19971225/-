@@ -10,11 +10,11 @@
         <view class="star">
           <text class="star-num">5.0分</text>
           <view class="star-s">
-            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
-            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
-            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
-            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
-            <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png"></image>
+            <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png"></image>
+            <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png"></image>
+            <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png"></image>
+            <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png"></image>
+            <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png"></image>
           </view>
         </view>
       </view>
@@ -24,7 +24,7 @@
             正常营业:
             <text>{{detailsList.live_time}}</text>
           </view>
-          <image class="btn" bindtap="call" src="https://lw.gyfledu.com/upload/images/bofang@2x.png"></image>
+          <image class="btn" bindtap="call" src="https://www.yizhiba.cn/upload/images/bofang@2x.png"></image>
         </view>
         <view class="conter-time">
           适合年龄:
@@ -35,17 +35,17 @@
             场地大小:
             <text>{{detailsList.shop_size}}</text>
           </view>
-          <view class="distance">距离我1.5km</view>
+          <view class="distance {{hidden==1?'hidden':''}}">距离我{{distance/1000}}km</view>
         </view>
       </view>
     </view>
   </view>
   <view class="location">
     <view class="location-left">
-      <image class="location-img" src="https://lw.gyfledu.com/upload/images/dinwei.png"></image>
-      <text class="location-txt">{{detailsList.live_store_address}}</text>
+      <image class="location-img" src="https://www.yizhiba.cn/upload/images/dinwei.png"></image>
+      <text class="location-txt">{{detailsList.shop_address}}</text>
     </view>
-    <!-- <image class="location-rigth" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png"></image> -->
+    <!-- <image class="location-rigth" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png"></image> -->
   </view>
   <view class="price">
     <view class="price-left">{{detailsList.goods_name}}</view>
@@ -57,9 +57,9 @@
   <view class="num">
     <view class="num-left">数量</view>
     <view class="num-right">
-      <image class="num-less" src="https://lw.gyfledu.com/upload/images/jie@2x.png" bindtap='minusCount'></image>
+      <image class="num-less" src="https://www.yizhiba.cn/upload/images/jie@2x.png" bindtap='minusCount'></image>
       <text>{{goodsNum}}</text>
-      <image class="num-plus" src="https://lw.gyfledu.com/upload/images/jia@2x.png" bindtap='addCount'></image>
+      <image class="num-plus" src="https://www.yizhiba.cn/upload/images/jia@2x.png" bindtap='addCount'></image>
     </view>
   </view>
   <view class="notice">
@@ -69,37 +69,37 @@
     </view>
     <view class="notice-conter">
       <view class="notice-conter-top">预约信息</view>
-      <view class="notice-conter-bot">
+      <view class="notice-conter-bot" wx:for="{{rule_info}}" wx:key="index">
         <lable></lable>
-        无需预约无需预约无需预约无需预约无需预约
+        {{item}}
       </view>
     </view>
     <view class="notice-conter">
-      <view class="notice-conter-top">预约信息</view>
-      <view class="notice-conter-bot">
+      <view class="notice-conter-top">适用人群</view>
+      <view class="notice-conter-bot" wx:for="{{crowd_info}}" wx:key="index">
         <lable></lable>
-        无需预约无需预约无需预约无需预约无需预约
+        {{item}}
       </view>
     </view>
     <view class="notice-conter">
-      <view class="notice-conter-top">预约信息</view>
-      <view class="notice-conter-bot">
+      <view class="notice-conter-top">规则提醒</view>
+      <view class="notice-conter-bot" wx:for="{{reserv_info}}" wx:key="index">
         <lable></lable>
-        无需预约无需预约无需预约无需预约无需预约
+        {{item}}
       </view>
     </view>
     <view class="notice-conter">
-      <view class="notice-conter-top">预约信息</view>
-      <view class="notice-conter-bot">
+      <view class="notice-conter-top">商家服务</view>
+      <view class="notice-conter-bot" wx:for="{{business_info}}" wx:key="index">
         <lable></lable>
-        无需预约无需预约无需预约无需预约无需预约
+        {{item}}
       </view>
     </view>
   </view>
   <!-- 底部固定 -->
   <view class="bottom">
     <view class="bottom-right">
-      总价: <text>￥{{detailsList.price*goodsNum}}</text>
+      总价: <text>￥{{finallyPrice}}</text>
     </view>
     <view class="bottom-btn" bindtap="payment">
       去付款

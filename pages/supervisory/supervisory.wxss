@@ -1,9 +1,12 @@
 
-Page {
+.page {
+  height: 100%;
+  width: 100%;
+}
+.conter {
   height: 100%;
   width: 100%;
 }
 image {
   width: 750rpx;
-  height: 100%;
 }

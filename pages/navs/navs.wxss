@@ -100,6 +100,10 @@
   color: #999999;
   float: left;
   margin-left: 10rpx;
+  width: 160rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 
 .distance {
@@ -120,4 +124,20 @@
   position: absolute;
   top: 0rpx;
   right: 0rpx;
+}
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.tishi {
+  width: 750rpx;
+  text-align: center;
+  margin: 0 auto;
+  color: #666666;
+  margin-top: 50rpx;
+  width:550rpx;
 }

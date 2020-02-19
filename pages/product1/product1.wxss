@@ -1,0 +1,106 @@
+/* pages/product1/product1.wxss */.box {
+  height: 74rpx;
+}
+
+image {
+  height: 100%;
+  width: 100%;
+}
+
+.banner {
+  width: 750rpx;
+  height: 368rpx;
+}
+
+.banner navigator {
+  width: 100%;
+  height: 100%;
+
+}
+
+.top {
+  height: 74rpx;
+  /* background-color: red; */
+  display: flex;
+  width: 690rpx;
+  justify-content: space-between;
+  line-height: 74rpx;
+  width: 690rpx;
+  white-space: nowrap;
+  display: flex;
+  line-height: 74rpx;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+  color: #333333;
+  padding-bottom: 7rpx;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.scroll-view-item {
+  margin-right: 80rpx;
+}
+
+.active {
+  text-align: center;
+}
+
+.active text {
+  font-size: 30rpx;
+  font-weight: 700;
+  display: block;
+}
+
+.active lable {
+  height: 6rpx;
+  width: 44rpx;
+  margin: 0 auto;
+  background-color: #00bc71;
+  display: block;
+  border-radius: 3rpx;
+}
+
+.name {
+  height: 100rpx;
+  font-size: 38rpx;
+  font-weight: 700;
+  border-bottom: 1rpx solid #fafafb;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+}
+
+.recommend {
+  position: relative;
+  height: 32rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  padding: 14rpx;
+  line-height: 32rpx;
+  margin-top: 30rpx;
+}
+
+.recommend lable {
+  position: absolute;
+  height: 44rpx;
+  width: 6rpx;
+  border-radius: 10rpx;
+  background-color: #00bc71;
+  left: 0;
+  top: 10rpx;
+}
+
+.project {
+  padding: 0 30rpx;
+}
+
+.matter {
+  padding: 0 30rpx;
+}
+
+.conter {
+  font-size: 26rpx;
+  color: #666666;
+  margin-top: 20rpx;
+}

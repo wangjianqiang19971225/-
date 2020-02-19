@@ -5,10 +5,17 @@ import {
 Page({
   data: {
     //判断小程序的API，回调，参数，组件等是否在当前版本可用。
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    uniqueid:''
   },
-  onLoad: function () {
-
+  onLoad: function (options) {
+    if (options.uniqueid == undefined) {
+      return false
+    } else {
+      this.setData({
+        uniqueid:options.uniqueid
+      })
+    }
   },
   bindGetUserInfo(res) {
     var that = this;
@@ -23,7 +30,7 @@ Page({
             console.log(JSON.stringify(info.detail.userInfo))
             // that.Token(res.code)
             wx.request({
-              url: 'https://lw.gyfledu.com/api/user/getToken',
+              url: 'https://www.yizhiba.cn/api/user/getToken',
               data: {
                 code: res.code,
               },
@@ -80,7 +87,18 @@ Page({
       token:wx.getStorageSync('token')
     }
     let Login = await request('Login', data, true, 'POST')
-    console.log(Login)
+    console.log(Login.code)
+    if(Login.code==1){
+      this.shareInter(this.data.uniqueid)
+    }
+  },
+  shareInter: function (uniqueid) {
+    let data = {
+      uniqueid: uniqueid,
+      token: wx.getStorageSync('token')
+    }
+    let shareInter = request('shareInter', data, false, 'GET')
+    console.log(shareInter)
   },
 
 })

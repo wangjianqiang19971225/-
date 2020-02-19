@@ -20,10 +20,10 @@
   <view class="recommend">
     <view class="recommend-top">商家信息</view>
     <view class="recommend-name">
-      <image class="recommend-img" src="https://lw.gyfledu.com/upload/images/dinwei.png"></image>
+      <image class="recommend-img" src="https://www.yizhiba.cn/upload/images/dinwei.png"></image>
       <text class="recommend-txt">{{orderList.live_store_address}}</text>
     </view>
-    <image class="recommend-po" bindtap="call" src="https://lw.gyfledu.com/upload/images/bofang@2x.png"></image>
+    <image class="recommend-po" bindtap="call" src="https://www.yizhiba.cn/upload/images/bofang@2x.png"></image>
   </view>
   <view class="news">
     <view class="news-top">订单信息</view>

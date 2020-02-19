@@ -1,0 +1,30 @@
+.line{
+  height: 20rpx;
+  width: 750rpx;
+  background-color: #f1f1f1;
+}
+.conter {
+  height: 90rpx;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #fafafb;
+  line-height: 90rpx;
+
+}
+.left {
+  width: 260rpx;
+  float: left;
+  font-size: 28rpx;
+  color: #999999;
+}
+.right{
+  float: left;
+  font-size: 28rpx;
+  color: #333333;
+  width: 430rpx;
+}
+.conter-l{
+  height: 90rpx;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #fafafb;
+
+}

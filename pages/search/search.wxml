@@ -1,6 +1,6 @@
 <view class="page">
   <view class="conter">
-    <input bindinput='input_txt' class="input" focus="true" maxlength="10" placeholder="搜索商户名、地点、课程" placeholderStyle="color:#aba9a9" type="text" confirm-type="search" bindconfirm="bindconfirm"></input>
+    <input bindinput='input_txt' class="input" focus="true" maxlength="10" placeholder="搜索商户名" placeholderStyle="color:#aba9a9" type="text" confirm-type="search" bindconfirm="bindconfirm"></input>
     <view class="serch-button"></view>
   </view>
   <view class="history {{currentTabsIndex == 1?'show':'hidden'}}">
@@ -11,7 +11,7 @@
       <text bindtap="searchText" data-index="{{index}}">{{item.value}}</text>
     </view>
   </view>
-  <view class="search-c  {{currentTabsIndex == 2?'show':'hidden'}}">
+  <view class="search-c  {{currentTabsIndex == 2?'show':'hidden'}} ">
     <view class="merchandise" wx:for="{{searchList}}"wx:key="index">
       <view class="left">
         <image class="merchandise-img" src="{{item.shop_logo}}" alt="" />
@@ -19,18 +19,18 @@
       <view class="right">
         <text class="merchandise-name">{{item.shop_name}}</text>
         <view class="star">
-          <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
-          <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
-          <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
-          <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
-          <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
+          <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
+          <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
+          <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
+          <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
+          <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
         </view>
         <view class="merchandise-time">营业时间: {{item.live_time}}</view>
-        <view class="merchandise-time">适合年龄: {{item.suit_age}}岁</view>
+        <view class="merchandise-time">适合年龄: {{item.suit_age}}</view>
         <view class="merchandise-position">
-          <image class="position" src="https://lw.gyfledu.com/upload/images/dinwei.png" alt="" />
+          <image class="position" src="https://www.yizhiba.cn/upload/images/dinwei.png" alt="" />
           <view class="position-txt">{{item.shop_address}}</view>
-          <view class="distance">距离我{{item.distance/1000}}km</view>
+          <view class="distance {{hidden==1?'hidden':''}}">距离我{{item.distance/1000}}km</view>
         </view>
         <navigator class="goto" hover-class="none" url="/pages/details/details?shop_id={{item.shop_id}}" open-type="navigate">
           进店

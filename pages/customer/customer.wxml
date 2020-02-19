@@ -1,5 +1,5 @@
 <view class="page">
-  <image class="banner" src="https://lw.gyfledu.com/upload/images/fenxiang1.png"></image>
+  <image class="banner" src="https://www.yizhiba.cn/upload/images/fenxiang1.png"></image>
   <view class="wx-popup">
     <view class="bgc">
       <view class="twoma">
@@ -8,7 +8,7 @@
       </view>
       <view class="line"></view>
       <view class="bgc-left" bindtap='save'>
-        <image src="https://lw.gyfledu.com/upload/images/xiangce@2x(1).png"></image>
+        <image src="https://www.yizhiba.cn/upload/images/xiangce@2x(1).png"></image>
         <text>保存至相册</text>
       </view>
       <view class="bgc-right">

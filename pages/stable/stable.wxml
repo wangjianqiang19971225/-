@@ -3,7 +3,7 @@
     <view class="conter">
       <view class="name">
         <view class="left">申请人</view>
-        <input type="text" class="input" placeholder="请输入申请人真实姓名"  name='name' value='{{form.name}}' focus="true" maxlength="11" type="text" />
+        <input type="text" class="input" placeholder="请输入申请人真实姓名" name='name' value='{{form.name}}' focus="true" maxlength="11" type="text" />
       </view>
       <view class="name">
         <view class="left">联系电话</view>
@@ -23,28 +23,32 @@
       </view>
       <view class="name">
         <view class="left">类型</view>
-        <picker class="right" bindchange="bindPickerChange" value="{{index}}" range="{{array}}"range-key="group_name">
+        <picker class="right" bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="group_name">
           <view class="right-l">
             <view class="txt">{{default}}</view>
           </view>
-          <image class="right-r" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+          <image class="right-r" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
         </picker>
       </view>
     </view>
     <view class="card" bindtap='getcamera1'>
       <view class="card-name">营业执照上传</view>
       <image class='ruimg' src='{{img1}}'></image>
-      <image class="card-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      <image class="card-img" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
     </view>
     <view class="card" bindtap='getcamera2'>
       <view class="card-name">身份证正面上传</view>
       <image class='ruimg' src='{{img2}}'></image>
-      <image class="card-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      <image class="card-img" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
     </view>
     <view class="card" bindtap='getcamera3'>
       <view class="card-name">身份证背面上传</view>
       <image class='ruimg' src='{{img3}}'></image>
-      <image class="card-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      <image class="card-img" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
+    </view>
+    <view class="Introduction">
+      <view class="Introduction-name">商家基本情况</view>
+      <textarea type="text" class="input-b" name='txt' value='{{form.txt}}' placeholder="请填写基本情况" />
     </view>
     <button class="btn" form-type="submit">申请</button>
   </form>

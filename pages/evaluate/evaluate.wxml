@@ -16,7 +16,7 @@
       <view class="topr">
         <image class="topr-img" src="{{item.pic_cover_small}}" alt="" />
         <view class="topr-txt">{{item.shop_name}}</view>
-        <image class="topr-image" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+        <image class="topr-image" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
       </view>
       <view class="topl">
         {{item.is_evaluate == 0? '待评价':''}}{{item.is_evaluate == 1? '已评价 ':''}}

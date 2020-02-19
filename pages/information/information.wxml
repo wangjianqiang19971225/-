@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="line"></view>
+  <view class="conter">
+    <view class="left">学生姓名</view>
+    <view class="right">{{getstudents.s_name}}</view>
+  </view>
+  <view class="conter">
+    <view class="left">学生年龄</view>
+    <view class="right">{{getstudents.s_age}}</view>
+  </view>
+  <view class="conter">
+    <view class="left">学生年级</view>
+    <view class="right">{{getstudents.s_grade}}</view>
+  </view>
+  <view class="conter">
+    <view class="left">学校名称</view>
+    <view class="right">{{getstudents.s_school}}</view>
+  </view>
+  <view class="conter">
+    <view class="left">家长电话</view>
+    <view class="right">{{getstudents.s_fimly_connect}}</view>
+  </view>
+  <view class="conter">
+    <view class="left">考试前分数</view>
+    <view class="right">{{getstudents.s_before_result}}</view>
+  </view>
+  <view class="conter">
+    <view class="left">考试后分数</view>
+    <view class="right">{{getstudents.last_result}}</view>
+  </view>
+   <view class="conter">
+    <view class="left">参加辅导时间</view>
+    <view class="right">{{getstudents.join_time}}</view>
+  </view>
+  <view class="conter-l">
+    <view class="left">辅导后成绩描述</view>
+    <view class="right">{{getstudents.s_after_describe}}</view>
+  </view>
+</view>

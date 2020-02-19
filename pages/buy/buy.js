@@ -2,6 +2,7 @@ import {
   request,
   regeneratorRuntime
 } from '../../utils/request.js'
+var app = getApp()
 Page({
 
   /**
@@ -10,7 +11,16 @@ Page({
   data: {
     detailsList: '',
     goodsNum: 1,
-    phoneNumber:''
+    phoneNumber:'',
+    distance:'',
+    business_info: [],
+    crowd_info: [],
+    reserv_info: [],
+    rule_info: [],
+    hidden:'',
+    price: '',
+    finallyPrice:''
+
   },
 
   /**
@@ -18,22 +28,34 @@ Page({
    */
   onLoad: function (options) {
     this.Buy(options.goods_id)
+    this.setData({
+      hidden :app.globalData.hidden
+     })
   },
-  onShow:function(){
-    this.onLoad()
-  },
+  // onShow:function(){
+  //   this.onLoad()
+  // },
 
   Buy: async function (id) {
     let data = {
+      lat: wx.getStorageSync('lat'),
+      lng: wx.getStorageSync('lon'),
       goods_id: id,
       token: wx.getStorageSync('token')
     }
     let Buy = await request('Buy', data, true, 'POST')
     console.log(Buy.info)
     this.setData({
-      detailsList: Buy.info,
-      phoneNumber: Buy.info.live_store_tel
+      detailsList: Buy.info.detail,
+      price: Buy.info.detail.price,
+      phoneNumber: Buy.info.detail.shop_phone,
+      business_info: Buy.info.purchaseNotes.business_info,
+      crowd_info: Buy.info.purchaseNotes.crowd_info,
+      reserv_info: Buy.info.purchaseNotes.reserv_info,
+      rule_info: Buy.info.purchaseNotes.rule_info,
+      distance: Buy.info.res.distance
     })
+    this.price()
   },
   payment: function () {
     this.buyNow(this.data.goodsNum)
@@ -61,6 +83,7 @@ Page({
     this.setData({
       goodsNum: num
     })
+    this.price()
   },
   //加
   addCount: function () {
@@ -69,11 +92,21 @@ Page({
     this.setData({
       goodsNum: num
     })
+    this.price()
   },
   call:function(){
     wx.makePhoneCall({
       phoneNumber:  this.data.phoneNumber
     })
   },
+  price:function () {
+    const num = this.data.goodsNum
+    console.log(num)
+    const price = this.data.price
+    console.log(price)
+    this.setData({
+      finallyPrice:( price * num).toFixed(2)
+    })
+  }
 
 })

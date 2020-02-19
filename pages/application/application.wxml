@@ -12,7 +12,7 @@
       <textarea type="text" class="input-b" name='txt' value='{{form.txt}}'  placeholder="请输入您发现的隐患描述" />
     </view>
     <view class="shangchuan">
-      <image class="sc-img {{card1 == ''?'show':'hidden'}}" bindtap='getcamera1' src="https://lw.gyfledu.com/upload/images/tianjia.png" alt="" />
+      <image class="sc-img {{card1 == ''?'show':'hidden'}}" bindtap='getcamera1' src="https://www.yizhiba.cn/upload/images/tianjia.png" alt="" />
       <image class="sc-img {{card1 == ''?'hidden':'show'}}" bindtap='getcamera1' src="{{img1}}" alt="" />
       <view class="sc-txt">上传隐患照片</view>
     </view>

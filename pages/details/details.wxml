@@ -1,7 +1,7 @@
 <view class="page">
   <view class="top-img">
     <image class="detailsimg" src="{{detailList.shop_avatar}}"></image>
-    <image class="detailsimg-shang {{shop_group_id==1?'hidden':'show'}}" bindtap="gotoshang" src='https://lw.gyfledu.com/upload/images/shangbao.png'></image>
+    <image class="detailsimg-shang {{shop_group_id==1?'hidden':'show'}}" bindtap="gotoshang" src='https://www.yizhiba.cn/upload/images/shangbao.png'></image>
     <view class="detailsimg-tou {{shop_group_id==1?'hidden':'show'}}">
       提交安全隐患一经确认，将获得相应的奖励，包括门票、门票优惠、赠送积分
     </view>
@@ -17,10 +17,10 @@
           <text class="star-num">{{detailList.score}}.0分</text>
           <view class="star-s">
             <block wx:for="{{one_1}}" wx:key="index">
-              <image src='https://lw.gyfledu.com/upload/images/xings2@2x.png'></image>
+              <image src='https://www.yizhiba.cn/upload/images/xings2@2x.png'></image>
             </block>
             <block wx:for="{{two_1}}" wx:key="index">
-              <image src='https://lw.gyfledu.com/upload/images/xings@2x.png'></image>
+              <image src='https://www.yizhiba.cn/upload/images/xings@2x.png'></image>
             </block>
           </view>
         </view>
@@ -32,28 +32,28 @@
             <text>{{detailList.live_time}}</text>
           </view>
           <view class="btn {{currentTabsIndex == 2?'hidden':'show'}}" bindtap="buy">购买</view>
-          <image class="btn-ipone {{currentTabsIndex == 2?'show':'hidden'}}" bindtap="call" src="https://lw.gyfledu.com/upload/images/bofang@2x.png"></image>
+          <image class="btn-ipone {{currentTabsIndex == 2?'show':'hidden'}}" bindtap="call" src="https://www.yizhiba.cn/upload/images/bofang@2x.png"></image>
         </view>
         <view class="conter-time">
           适合年龄:
-          <text>{{detailList.suit_age}}岁</text>
+          <text>{{detailList.suit_age}}</text>
         </view>
         <view class="details-time-bot">
           <view class="top-time">
             场地大小:
             <text>{{detailList.shop_size}}</text>
           </view>
-          <view class="distance">距离我1.5km</view>
+          <view class="distance {{hidden==1?'hidden':''}}">距离我{{detailList.distance/1000}}km</view>
         </view>
       </view>
     </view>
   </view>
   <view class="location">
     <view class="location-left">
-      <image class="location-img" src="https://lw.gyfledu.com/upload/images/dinwei.png"></image>
+      <image class="location-img" src="https://www.yizhiba.cn/upload/images/dinwei.png"></image>
       <text class="location-txt">{{detailList.shop_address}}</text>
     </view>
-    <!-- <image class="location-rigth" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png"></image> -->
+    <!-- <image class="location-rigth" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png"></image> -->
   </view>
   <view class="nav">
     <view class="{{currentTabsIndex == 1?'active':''}}" data-current="1" bindtap="tap">
@@ -69,7 +69,7 @@
       <lable></lable>
     </view>
     <view class="{{currentTabsIndex == 4?'active':''}}" data-current="4" bindtap="tap">
-      <text>{{shop_group_id==1?'教学记录':'监督记录'}}</text>
+      <text>{{shop_group_id==1?'教学成绩跟踪':'监督记录'}}</text>
       <lable></lable>
     </view>
   </view>
@@ -104,20 +104,19 @@
         {{shop_group_id==1?'师资力量与教学环境':'乐园项目'}}
         <lable></lable>
       </view>
-      <navigator class="recommend-conter" hover-class="none" wx:for='{{detailList7}}' url="/pages/product/product?shop_id={{detailList.shop_id}}&id={{index}}" open-type="navigate" wx:key="index">
-        <image src="{{item.active_image[0]}}" alt="" />
-        <text>{{item.active_title}}</text>
-      </navigator>
+      <view class="recommend-box">
+        <view class="recommend-conter" bindtap="{{shop_group_id==1?'product1':'product'}}" wx:for='{{detailList7}}' wx:key="index" data-index="{{index}}">
+          <image src="{{item.active_image}}" alt="" />
+          <text>{{item.active_title}}</text>
+        </view>
+      </view>
     </view>
   </view>
   <!-- 本站福利 -->
   <view class="{{currentTabsIndex == 2?'show':'hidden'}}">
     <view class="welfare">
-      <view class="welfare-top">本站会员</view>
-      <view class="welfare-conter">{{detailList3.welfare1}}</view>
-      <view class="welfare-conter">{{detailList3.welfare2}}</view>
-      <view class="welfare-conter">{{detailList3.welfare3}}</view>
-      <view class="welfare-conter">{{detailList3.welfare4}}</view>
+      <view class="welfare-top">本站会员享受以下福利</view>
+      <view class="welfare-conter" wx:for="{{detailList3}}" wx:key="index">{{item}}</view>
     </view>
     <view class="welfare-shop" wx:for="{{detailList4}}" wx:key="index">
       <view class="welfare-item">
@@ -133,11 +132,11 @@
           <view class="item-bottom ">
             <view class="item-price">
               ￥
-              <text>{{item.promotion_price}}</text>
+              <text>{{item.price}}</text>
             </view>
             <view class="item-price" style="color:#e0e0e0;">
               ￥
-              <text style="text-decoration:line-through;">{{item.market_price}}</text>
+              <text style="text-decoration:line-through;font-size:20rpx;">{{item.market_price}}</text>
             </view>
           </view>
         </view>
@@ -147,8 +146,7 @@
   <!-- 注意事项 -->
   <view class="{{currentTabsIndex == 3?'show':'hidden'}}">
     <view class="note">
-      <view>{{detailList5.notice1}}</view>
-      <view>{{detailList5.notice2}}</view>
+      <view wx:for="{{detailList5}}" wx:key="index">{{item}}</view>
     </view>
   </view>
   <!-- 教学记录 -->
@@ -160,19 +158,19 @@
         <view class="point-time">考试前</view>
         <view class="point-time">考试后</view>
       </view>
-      <view class="point " wx:for="{{detailList6}}" wx:key="index">
+      <navigator class="point " wx:for="{{detailList6}}" wx:key="index" hover-class="none" url="/pages/information/information?id={{item.id}}" open-type="navigate">
         <view class="point-name">{{item.s_name}}</view>
         <view class="point-name">{{item.s_school}}</view>
         <view class="point-name">{{item.s_before_result}}</view>
         <view class="point-name">{{item.last_result}}</view>
-      </view>
+      </navigator>
       <!-- <view class="control-btn">查看更多</view> -->
     </view>
     <view class="control2 {{shop_group_id==2?'show':'hidden'}}" wx:for="{{detailList6}}" wx:key="index">
-      <navigator class="point" hover-class="none" url="/pages/supervisory/supervisory?pic={{item.pic}}" open-type="navigate">
+      <navigator class="point" hover-class="none" url="/pages/supervisory/supervisory?pic={{item.supervise_id}}" open-type="navigate">
         <view class="point-name">{{item.start_data}} {{item.start_time}}</view>
         <view class="point-name">{{item.title}}</view>
-        <image class="topr-image" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+        <image class="topr-image" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
       </navigator>
       <!-- <view class="control-btn">查看更多</view> -->
     </view>

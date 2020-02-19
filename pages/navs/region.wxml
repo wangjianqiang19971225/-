@@ -17,22 +17,22 @@
         <view class="left">申请区域</view>
         <view class="right" bindtap="getLocation">
           <view class="right-l">
-            <image class="position" src="https://lw.gyfledu.com/upload/images/dinwei.png" alt="" />
+            <image class="position" src="https://www.yizhiba.cn/upload/images/dinwei.png" alt="" />
             <view class="txt">{{LocationList}}</view>
           </view>
-          <image class="right-r" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+          <image class="right-r" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
         </view>
       </view>
     </view>
     <view class="card" bindtap='getcamera2'>
       <view class="card-name">身份证正面上传</view>
       <image class='ruimg' src='{{img2}}'></image>
-      <image class="card-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      <image class="card-img" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
     </view>
     <view class="card" bindtap='getcamera3'>
       <view class="card-name">身份证背面上传</view>
       <image class='ruimg' src='{{img3}}'></image>
-      <image class="card-img" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+      <image class="card-img" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
     </view>
     <button class="btn" form-type="submit">申请</button>
   </form>

@@ -23,7 +23,6 @@ image {
 
 .location-txt {
   font-size: 36rpx;
-  font-weight: 700;
 }
 
 .location-img {
@@ -60,7 +59,7 @@ image {
   width: 29rpx;
   position: absolute;
   top: 18rpx;
-  left: 100rpx;
+  left: 190rpx;
 }
 
 /* 轮播图 */
@@ -88,12 +87,16 @@ image {
 .navs navigator {
   width: 112rpx;
   height: 138rpx;
+  display:block;
 }
 
-.navs text {
+.nav-c {
   font-size: 28rpx;
   font-weight: 700;
   color: #333333;
+  display: block;
+  height: 50rpx;
+  white-space: nowrap;
 }
 
 .navs image {
@@ -101,6 +104,7 @@ image {
   width: 80rpx;
   border-radius: 80rpx;
   margin-left: 15rpx;
+  display: block;
 }
 
 /* 推荐 */
@@ -270,7 +274,7 @@ button {
   height: 90rpx;
   margin-bottom: 5rpx;
   background-color: #FFF;
-  background-image: url(https://lw.gyfledu.com/upload/images/weixin_03.png);
+  background-image: url(https://www.yizhiba.cn/upload/images/weixin_03.png);
   background-size: contain;
   background-repeat: no-repeat;
 }

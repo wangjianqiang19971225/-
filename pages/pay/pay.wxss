@@ -103,7 +103,6 @@ Page {
   right: 30rpx;
 }
 .news {
-  height: 240rpx;
   background-color: #fff;
   padding: 30rpx;
   width: 750rpx;

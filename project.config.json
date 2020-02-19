@@ -4,18 +4,25 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
-		"checkSiteMap": false
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.5",
-	"appid": "wx157da91b0d151461",
+	"libVersion": "2.8.0",
+	"appid": "wx6324e4131c840060",
 	"projectname": "liuwa",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -41,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 15,
 			"list": [
 				{
 					"id": 0,
@@ -145,6 +152,13 @@
 					"id": 14,
 					"name": "pages/product/product",
 					"pathName": "pages/product/product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/information/information",
+					"pathName": "pages/information/information",
 					"query": "",
 					"scene": null
 				}

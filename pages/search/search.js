@@ -13,13 +13,17 @@ Page({
     searchRecord: [],
     searchList: [],
     currentTabsIndex: 1,
-    index:''
+    index: '',
+    hidden: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      hidden: app.globalData.hidden
+    })
     this.openHistorySearch()
     console.log(this.data.searchRecord)
   },
@@ -32,9 +36,9 @@ Page({
   bindconfirm: function () {
     const keyword = this.data.searchTxt
     this.Search(keyword)
-   this.setData({
-    currentTabsIndex:2
-   })
+    this.setData({
+      currentTabsIndex: 2
+    })
     var searchRecord = this.data.searchRecord
     if (keyword == '') {
       //输入为空时的处理
@@ -59,17 +63,17 @@ Page({
   Search: async function (keyword) {
     let data = {
       keyword: keyword,
-      lat:app.globalData.lat,
-      lng:app.globalData.lon
+      lat: wx.getStorageSync('lat'),
+      lng: wx.getStorageSync('lon'),
     }
     let Search = await request('Search', data, true, 'POST')
     console.log(Search)
     this.setData({
       searchList: Search.data
     })
-    if(Search.data==''){
+    if (Search.data == '') {
       this.setData({
-        index:1
+        index: 1
       })
     }
   },
@@ -83,7 +87,7 @@ Page({
     const search = this.data.searchRecord[index].value
     this.Search(search)
     this.setData({
-      currentTabsIndex:2
-     })
+      currentTabsIndex: 2
+    })
   },
 })

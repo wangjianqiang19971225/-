@@ -24,7 +24,7 @@
       <navigator class="topr" hover-class="none" url="" open-type="navigate">
         <image class="topr-img" src="{{item.pic_cover_small}}" alt="" />
         <view class="topr-txt">{{item.shop_name}}</view>
-        <image class="topr-image" src="https://lw.gyfledu.com/upload/images/fanhui@2x(1).png" alt="" />
+        <image class="topr-image" src="https://www.yizhiba.cn/upload/images/fanhui@2x(1).png" alt="" />
       </navigator>
       <view class="topl">
         {{item.pay_status == 0? '待付款':''}}{{item.pay_status == 2? '待使用':''}}{{item.pay_status == 3? '已完成':''}}{{item.pay_status == 4? '待评价':''}}

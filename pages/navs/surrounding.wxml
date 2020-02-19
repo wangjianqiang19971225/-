@@ -3,7 +3,7 @@
   <view class="box">
     <view class="top">
       <view class="{{currentTabsIndex == 1?'active':''}}" data-current="1" bindtap="tap">
-        <text>周边</text>
+        <text>周边5公里</text>
         <lable></lable>
       </view>
       <view class="{{currentTabsIndex == 2?'active':''}}" data-current="2" bindtap="tap">
@@ -24,22 +24,25 @@
     <view class="right">
       <text class="merchandise-name">{{item.shop_name}}</text>
       <view class="star">
-        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
-        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
-        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
-        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
-        <image src="https://lw.gyfledu.com/upload/images/xings2@2x.png" alt="" />
+        <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
+        <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
+        <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
+        <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
+        <image src="https://www.yizhiba.cn/upload/images/xings2@2x.png" alt="" />
       </view>
       <view class="merchandise-time">营业时间: {{item.live_time}}</view>
-      <view class="merchandise-time">适合年龄: {{item.suit_age}}岁</view>
+      <view class="merchandise-time">适合年龄: {{item.suit_age}}</view>
       <view class="merchandise-position">
-        <image class="position" src="https://lw.gyfledu.com/upload/images/dinwei.png" alt="" />
+        <image class="position" src="https://www.yizhiba.cn/upload/images/dinwei.png" alt="" />
         <view class="position-txt">{{item.shop_address}}</view>
-        <view class="distance">距离我{{item.distance/1000}}km</view>
+        <view class="distance {{hidden==1?'hidden':''}}">距离我{{item.distance/1000}}km</view>
       </view>
       <navigator class="goto" hover-class="none" url="/pages/details/details?shop_id={{item.shop_id}}" open-type="navigate">
         进店
       </navigator>
     </view>
+  </view>
+  <view class="tishi {{index == 1?'show':'hidden'}}">
+    还未发布周边商家信息哦，申请成为区域管家，加入我们吧！
   </view>
 </view>

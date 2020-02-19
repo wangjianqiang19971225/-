@@ -2,6 +2,7 @@
 .box {
   height: 74rpx;
 }
+
 .top {
   height: 74rpx;
   /* background-color: red; */
@@ -19,6 +20,7 @@
   z-index: 1;
   background-color: #fff;
 }
+
 .active {
   text-align: center;
 }
@@ -40,7 +42,7 @@
 
 /* 商品 */
 .merchandise {
- padding: 30rpx;
+  padding: 30rpx;
   /* background-color: red; */
   height: 190rpx;
   width: 690rpx;
@@ -72,13 +74,13 @@
 .star image {
   height: 22rpx;
   width: 22rpx;
-  margin-right:5rpx;
+  margin-right: 5rpx;
 }
 
 .merchandise-time {
   font-size: 24rpx;
   color: #999999;
-  margin-top:5rpx;
+  margin-top: 5rpx;
 }
 
 .merchandise-position {
@@ -88,7 +90,7 @@
 
 .position {
   height: 24rpx;
-  width:18rpx;
+  width: 18rpx;
   float: left;
   margin-top: 5rpx;
 }
@@ -98,17 +100,23 @@
   color: #999999;
   float: left;
   margin-left: 10rpx;
+  width: 160rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
+
 .distance {
   float: right;
   font-size: 24rpx;
   color: #00bc71;
 }
-.goto{
+
+.goto {
   height: 47rpx;
   width: 100rpx;
   background-color: #00bc71;
-  color:#fff;
+  color: #fff;
   font-size: 28rpx;
   line-height: 47rpx;
   text-align: center;
@@ -116,4 +124,21 @@
   position: absolute;
   top: 0rpx;
   right: 0rpx;
+}
+
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.tishi {
+  width: 750rpx;
+  text-align: center;
+  margin: 0 auto;
+  color: #666666;
+  margin-top: 50rpx;
+  width:550rpx;
 }

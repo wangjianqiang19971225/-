@@ -23,6 +23,7 @@ Page({
     address: '',
     business: '',
     credit: '',
+    txt: '',
   },
   //点击上传身份证正面 调取相机和相册
   getcamera1: function (options) {
@@ -38,7 +39,7 @@ Page({
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         // var tempFilePaths = res.tempFilePaths
         wx.uploadFile({
-          url: "https://lw.gyfledu.com/api/Uploadify/upFile", //这个方法就是后台处理上传的方法
+          url: "https://www.yizhiba.cn/api/Uploadify/upFile", //这个方法就是后台处理上传的方法
           filePath: res.tempFilePaths[0], //获取到上传的图片
           name: 'file',
           success: function (info) {
@@ -72,7 +73,7 @@ Page({
       success: function (res) {
         console.log(res)
         wx.uploadFile({
-          url: "https://lw.gyfledu.com/api/Uploadify/upFile",
+          url: "https://www.yizhiba.cn/api/Uploadify/upFile",
           filePath: res.tempFilePaths[0],
           name: 'file',
           success: function (info) {
@@ -104,7 +105,7 @@ Page({
       success: function (res) {
         console.log(res)
         wx.uploadFile({
-          url: "https://lw.gyfledu.com/api/Uploadify/upFile",
+          url: "https://www.yizhiba.cn/api/Uploadify/upFile",
           filePath: res.tempFilePaths[0],
           name: 'file',
           success: function (info) {
@@ -163,6 +164,10 @@ Page({
         required: true,
         minlength: 18
       },
+      txt: {
+        required: true,
+        minlength: 6
+      },
 
     }
     const messages = {
@@ -184,6 +189,10 @@ Page({
         required: '请输入您的统一社会信用代码',
         minlength: '请输入正确的统一社会信用代码'
       },
+      txt: {
+        required: '请填写商家基本情况',
+        minlength:'商家基本情况描述至少填写6个字'
+      },
     }
     this.WxValidate = new WxValidate(rules, messages)
   },
@@ -196,7 +205,7 @@ Page({
     const address = e.detail.value.address
     const business = e.detail.value.business
     const credit = e.detail.value.credit
-    console.log(e)
+    const txt = e.detail.value.txt
     //校验表单
     if (!this.WxValidate.checkForm(params)) {
       const error = this.WxValidate.errorList[0]
@@ -217,13 +226,7 @@ Page({
         msg: '请您完善信息'
       })
     } else {
-      this.regBusiness(name, phone, address, business, credit, card1, card2, card3, arrayId, arrayname)
-      this.showModal({
-        msg: '申请成功'
-      })
-      wx.navigateBack({
-        delta: 1
-      })
+      this.regBusiness(name, phone, address, business, credit, card1, card2, card3, arrayId, arrayname,txt)
     }
 
   },
@@ -247,7 +250,7 @@ Page({
       array: BusinessType.data
     })
   },
-  regBusiness: async function (name, phone, address, business, credit, card1, card2, card3, arrayId, arrayname) {
+  regBusiness: async function (name, phone, address, business, credit, card1, card2, card3, arrayId, arrayname,txt) {
     let data = {
       token: wx.getStorageSync('token'),
       user_name: name,
@@ -260,10 +263,24 @@ Page({
       business_licence_number_electronic: card1,
       contacts_card_electronic_2: card2,
       contacts_card_electronic_3: card3,
+      business_info:txt
     }
     let regBusiness = await request('regBusiness', data, true, 'POST')
     console.log(regBusiness.data)
+    if(regBusiness.code == 1 ) {
+      wx.showModal({
+        content: '申请成功',
+        showCancel: false,
+        success (res) {
+          if (res.confirm) {
+            wx.navigateBack({
+              delta: 1
+            })
+          }
+        }
+      })
 
+    }
 
     // if (regBusiness.data.code == 1) {
 

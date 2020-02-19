@@ -5,12 +5,23 @@ Page {
 /* .conter {
   padding:  0 30rpx;
 } */
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .my-header {
   height: 300rpx;
   padding: 0 30rpx;
-  background-image:url(https://lw.gyfledu.com/upload/images/bizhi.png);
+  background-image:url(https://www.yizhiba.cn/upload/images/bizhi.png);
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center
 }
 
 .my-img {
@@ -18,14 +29,23 @@ Page {
   width: 121rpx;
   border-radius: 100%;
   border: 5rpx solid #fff;
-  margin-top: 70rpx;
-  float: left;
 }
 
 .my-right {
-  float: left;
   margin-left: 20rpx;
-  margin-top: 90rpx;
+}
+button::after {
+  border: none;
+}
+button {
+  background-color: transparent;
+}
+.button {
+  margin-left: 20rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #fff;
+  /* background-color: #fff; */
 }
 
 .my-name {

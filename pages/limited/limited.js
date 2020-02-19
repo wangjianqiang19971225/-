@@ -25,6 +25,8 @@ Page({
   },
   Timecourse: async function () {
     let data = {
+      lat: wx.getStorageSync('lat'),
+      lng: wx.getStorageSync('lon'),
       more: 2
     }
     let Timecourse = await request('Timecourse', data, true, 'POST')

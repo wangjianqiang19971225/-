@@ -36,7 +36,7 @@ Page({
       success: function (res) {
         console.log(res)
         wx.uploadFile({
-          url: "https://lw.gyfledu.com/api/Uploadify/upFile",
+          url: "https://www.yizhiba.cn/api/Uploadify/upFile",
           filePath: res.tempFilePaths[0],
           name: 'file',
           success: function (info) {
@@ -68,7 +68,7 @@ Page({
       success: function (res) {
         console.log(res)
         wx.uploadFile({
-          url: "https://lw.gyfledu.com/api/Uploadify/upFile",
+          url: "https://www.yizhiba.cn/api/Uploadify/upFile",
           filePath: res.tempFilePaths[0],
           name: 'file',
           success: function (info) {
@@ -172,12 +172,7 @@ Page({
       })
     } else {
       this.regHouseKeeper(name, phone, address, card2, card3, longitude, latitude)
-      this.showModal({
-        msg: '申请成功'
-      })
-      wx.navigateBack({
-        delta: 1
-      })
+
     }
   },
   regHouseKeeper: async function (name, phone, address, card2, card3, longitude, latitude) {
@@ -193,7 +188,19 @@ Page({
     }
     let regHouseKeeper = await request('regHouseKeeper', data, true, 'POST')
     console.log(regHouseKeeper.data)
-
+    if(regHouseKeeper.code == 1 ) {
+      wx.showModal({
+        content: '申请成功',
+        showCancel: false,
+        success (res) {
+          if (res.confirm) {
+            wx.navigateBack({
+              delta: 1
+            })
+          }
+        }
+      })
+    }
   },
 
 })

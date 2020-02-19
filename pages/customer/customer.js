@@ -17,17 +17,29 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onShow: function (options) {
     this.scerweima()
   },
   scerweima: async function () {
     let data = {
-      url: "/pages/index/index"
+      url:wx.getStorageSync('uniqueid')
     }
-    let scerweima = await request('scerweima', data, false, 'POST')
+    let scerweima = await request('getindexscrmer', data, false, 'POST')
+    console.log(scerweima)
     this.setData({
       scerweima: scerweima.data
     })
+    if(scerweima.code == 1){
+      wx.clearStorage()
+      wx.switchTab({
+        url: '/pages/my/my'
+      })
+      wx.showToast({
+        title: '请登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
   getscrmer: async function () {
     let data = {
@@ -38,6 +50,17 @@ Page({
     this.setData({
       imgUrl: getscrmer.data
     })
+    if(getscrmer.code == 1){
+      wx.clearStorage()
+      wx.switchTab({
+        url: '/pages/my/my'
+      })
+      wx.showToast({
+        title: '请登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
   onShareAppMessage: function (res) {
     var that = this

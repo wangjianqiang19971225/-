@@ -23,12 +23,12 @@ Page({
   },
   Recomend: async function () {
     let data = {
-      lat: app.globalData.lat,
-      lon: app.globalData.lon,
+      lat: wx.getStorageSync('lat'),
+      lng: wx.getStorageSync('lon'),
       more: 2
     }
     let Recomend = await request('Recomend', data, true, 'POST')
-    console.log(Recomend.data)
+    console.log(Recomend)
     this.setData({
       recomendList: Recomend.data
     })

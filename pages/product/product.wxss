@@ -104,3 +104,13 @@ image {
   color: #666666;
   margin-top: 20rpx;
 }
+.recommend-img {
+  width: 690rpx;
+  height: 368rpx;
+}
+.hidden{
+  display: none !important;
+}
+.show{
+  display: block !important;
+}

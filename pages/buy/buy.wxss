@@ -2,7 +2,13 @@ Page {
   background-color: #fafafb;
 }
 
+.show {
+  display: block !important;
+}
 
+.hidden {
+  display: none !important;
+}
 .detailsimg {
   height: 407rpx;
   width: 750rpx;
